@@ -1,0 +1,7 @@
+node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/valheim/full.md
+docs/public/downloads/
+.local/
+*.log

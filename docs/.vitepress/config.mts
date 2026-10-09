@@ -1,0 +1,41 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  lang: 'zh-CN',
+  title: 'QzKING · 游戏拆解',
+  description: 'QzKING2023 的游戏拆解与观察。从游玩体验出发，理解战斗中的规则、选择与反馈。',
+  base: '/QzKING-s-game-breakdown/',
+  cleanUrls: false,
+  head: [['meta', { name: 'theme-color', content: '#f6f5f0' }]],
+  themeConfig: {
+    siteTitle: 'QzKING / 游戏拆解',
+    nav: [
+      { text: '首页', link: '/', activeMatch: '^/$' },
+      { text: 'Valheim 拆解', link: '/valheim/', activeMatch: '^/valheim/' },
+      { text: '关于我', link: '/about', activeMatch: '^/about' }
+    ],
+    sidebar: false,
+    outline: { level: [2, 3], label: '本页目录' },
+    search: {
+      provider: 'local',
+      options: { locales: { root: { translations: {
+        button: { buttonText: '搜索', buttonAriaLabel: '搜索文章' },
+        modal: { displayDetails: '显示详细结果', resetButtonTitle: '清除搜索', backButtonTitle: '返回', noResultsText: '没有找到相关内容', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } }
+      } } } }
+    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/QzKING2023' }],
+    docFooter: { prev: '上一篇', next: '下一篇' },
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换至浅色',
+    darkModeSwitchTitle: '切换至深色',
+    sidebarMenuLabel: '目录',
+    returnToTopLabel: '返回顶部',
+    footer: { message: '从游戏体验出发，追问设计背后的原因。', copyright: 'QzKING2023 · 游戏拆解与观察' }
+  },
+  markdown: {
+    config(md) {
+      md.renderer.rules.table_open = () => '<div class="table-scroll" role="region" aria-label="数据表格，可横向滚动" tabindex="0"><table>'
+      md.renderer.rules.table_close = () => '</table></div>'
+    }
+  }
+})
