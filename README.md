@@ -17,14 +17,17 @@ Windows PowerShell 如限制 npm 脚本，可把命令中的 `npm` 换成 `npm.c
 
 ## 更新内容
 
-- 完整文章：编辑根目录的 `Valheim战斗系统拆解案.md`。这是全文唯一的内容来源，不要编辑生成的 `docs/valheim/full.md`。修改原稿后重新启动预览或运行构建。
-- 导读：编辑 `docs/valheim/index.md`。
+- 完整文章：编辑根目录的 `Valheim战斗系统拆解案.md` 或 `BF6_Gunplay_拆解案.md`。根目录原稿是全文唯一的内容来源，不要编辑生成的 `docs/valheim/full.md` 或 `docs/bf6/full.md`。修改原稿后重新启动预览或运行构建。
+- 导读：编辑 `docs/valheim/index.md` 或 `docs/bf6/index.md`。
+- BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与原稿中的相对路径对应。构建时自动复制到全文与下载目录。
 - 个人介绍和联系方式：编辑 `docs/about.md`。
 - 首页：编辑 `docs/.vitepress/theme/HomePage.vue`。
 - 网站名称、导航和部署子路径：编辑 `docs/.vitepress/config.mts`。
 - 页面风格：编辑 `docs/.vitepress/theme/style.css`。
 
-构建时会复制原稿，加入不改变标题文字的章节锚点，并生成 Markdown 下载文件。根目录原稿不会被改写。版本号与分析数据来自原稿，网站构建不负责核实游戏事实。
+构建时会按 `scripts/articles.mjs` 中的文章列表复制原稿，加入不改变标题文字的章节锚点，并生成 Markdown 下载文件。根目录原稿不会被改写。版本号与分析数据来自原稿，网站构建不负责核实游戏事实。
+
+BF6 原稿下载保持原文不变。离线查看配图时，还需从仓库下载同级的 `BF6_Gunplay_拆解案_assets/` 文件夹；网站的 `downloads/` 下也保留了这些相对图片路径。
 
 以后增加文章，可以在 `docs/` 下新建文件夹并加入 `index.md`，在首页和导航添加入口。图片建议放在文章同目录的 `images/` 文件夹，使用 `![说明](./images/文件名.png)` 引用。Valheim 原稿添加图片时，使用 `docs/public/images/valheim/` 存图、`![说明](/images/valheim/文件名.png)` 引用，保证生成后的文章可正确引用图片。
 

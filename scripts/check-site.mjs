@@ -2,6 +2,7 @@ import { readFile, readdir, stat } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import assert from 'node:assert/strict'
+import { articles } from './articles.mjs'
 
 const root = fileURLToPath(new URL('../docs/.vitepress/dist/', import.meta.url))
 const base = '/QzKING-s-game-breakdown/'
@@ -15,7 +16,7 @@ async function read(file) {
   if (!cache.has(file)) cache.set(file, await readFile(file, 'utf8'))
   return cache.get(file)
 }
-for (const required of ['index.html', 'about.html', 'valheim/index.html', 'valheim/full.html']) {
+for (const required of ['index.html', 'about.html', ...articles.flatMap(({ slug }) => [`${slug}/index.html`, `${slug}/full.html`])]) {
   assert.ok(pages.includes(path.join(root, required)), `缺少页面：${required}`)
 }
 let count = 0
@@ -39,12 +40,21 @@ for (const page of pages) {
     count++
   }
 }
-const original = await readFile(new URL('../Valheim战斗系统拆解案.md', import.meta.url))
-const download = await readFile(path.join(root, 'downloads/valheim-combat.md'))
-assert.deepEqual(download, original, '下载文件应与原始 Markdown 完全一致')
-const article = await read(path.join(root, 'valheim/full.html'))
-for (let i = 0; i <= 14; i++) assert.ok(article.includes(`id="section-${i}"`), `缺少第 ${i} 节`)
-assert.ok(article.includes('role="region"') && article.includes('tabindex="0"'), '表格应支持键盘横向滚动')
+for (const entry of articles) {
+  const original = await readFile(new URL(`../${entry.source}`, import.meta.url))
+  const download = await readFile(path.join(root, `downloads/${entry.download}`))
+  assert.deepEqual(download, original, `${entry.slug} 下载文件应与原始 Markdown 完全一致`)
+  const article = await read(path.join(root, `${entry.slug}/full.html`))
+  for (let i = 0; i <= 14; i++) assert.ok(article.includes(`id="section-${i}"`), `缺少第 ${i} 节`)
+  for (const appendix of ['A', 'B', 'C', 'D']) assert.ok(article.includes(`id="appendix-${appendix}"`), `缺少附录 ${appendix}`)
+  assert.ok(article.includes('role="region"') && article.includes('tabindex="0"'), '表格应支持键盘横向滚动')
+  for (const [name, alt] of Object.entries(entry.images ?? {})) {
+    assert.ok(article.includes(`alt="${alt}"`), `缺少图表说明：${name}`)
+    const sourceImage = await readFile(new URL(`../${entry.assetDirectory}/${name}`, import.meta.url))
+    const downloadImage = await readFile(path.join(root, 'downloads', entry.assetDirectory, name))
+    assert.deepEqual(downloadImage, sourceImage, `下载原稿配图不一致：${name}`)
+  }
+}
 const about = await read(path.join(root, 'about.html'))
 assert.ok(about.includes('mailto:Q1625732064@outlook.com') && about.includes('185872494'))
 console.log(`检查通过：${pages.length} 个页面，${count} 个站内链接与资源；章节锚点、联系方式、原稿下载完整。`)
