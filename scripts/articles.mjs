@@ -1,6 +1,15 @@
 // Root manuscripts and their assets are the only sources for full articles.
 export const articles = [
   {
+    slug: 'asw',
+    source: 'ASW角色变迁拆解案.md',
+    download: 'asw-character-evolution.md',
+    title: '从角色看系列的变迁与格斗游戏的发展 · 全文',
+    description: '以 Sol、Zato、Ragna、Rachel 四个角色的历代变化，分析 Arc System Works 如何在降低门槛与保留系统深度之间取舍。',
+    sections: 9,
+    appendices: ['A', 'B', 'C']
+  },
+  {
     slug: 'valheim',
     source: 'Valheim战斗系统拆解案.md',
     download: 'valheim-combat.md',

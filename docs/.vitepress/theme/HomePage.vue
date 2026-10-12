@@ -19,6 +19,24 @@ import { withBase } from 'vitepress'
       </div>
     </section>
 
+    <section class="featured" aria-labelledby="asw-title">
+      <div class="section-heading"><p class="eyebrow">拆解案 / CASE STUDY</p><span>03 / 格斗游戏</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-asw" aria-label="从角色看系列的变迁与格斗游戏的发展的文字封面">
+          <span class="cover-label">系列演变研究</span>
+          <div><span class="cover-small">GUILTY GEAR / BLAZBLUE</span><p class="cover-title">ASW<br>CHARACTERS</p><p class="cover-subtitle">门槛、深度，与简化的边界。</p></div>
+          <div class="cover-footer"><span>连段 / 取消窗口 / 资源机制</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>2D 格斗</span><span>系列演变</span><span>文件取证</span></div>
+          <h2 id="asw-title">格斗游戏变简单了，<br>深度去了哪里？</h2>
+          <p>以 Sol、Zato、Ragna、Rachel 四个角色的历代变化为线索，讨论 Arc System Works 如何降低门槛，又保留了哪些深度。</p>
+          <p class="work-method">原稿结合 Dustloop 帧数与连段数据、游戏脚本与碰撞文件、官方补丁说明，把执行难度与决策难度分开比较。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/asw/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/asw/full.html')">直接阅读全文</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="featured" aria-labelledby="bf6-title">
       <div class="section-heading"><p class="eyebrow">拆解案 / CASE STUDY</p><span>02 / 枪械机制</span></div>
       <div class="work-layout">
@@ -57,6 +75,8 @@ import { withBase } from 'vitepress'
 
     <section class="questions" aria-labelledby="questions-title">
       <div class="section-heading"><h2 id="questions-title">这些拆解在追问什么</h2><span>选择一个问题，进入正文</span></div>
+      <a :href="withBase('/asw/full.html#section-6-1')" class="question-row"><span class="question-number">ASW</span><div><h3>主角的核心连段，到底简单了多少？</h3><p>按衔接类型拆开 Sol 与 Ragna 历代的 Core BnB。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/asw/full.html#section-6-2')" class="question-row"><span class="question-number">ASW</span><div><h3>Strive 的手感变宽松，来自帧顿还是规则？</h3><p>从游戏脚本读出帧顿、输入缓冲与取消窗口。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/bf6/full.html#section-3')" class="question-row"><span class="question-number">BF6</span><div><h3>后坐力有多少能练，又有多少只能碰运气？</h3><p>从准星轨迹区分平均上抬与每发随机方向。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/bf6/full.html#section-5')" class="question-row"><span class="question-number">BF6</span><div><h3>一把枪的有效射程，为什么会是一个分布？</h3><p>看后坐力与扩散怎样共同影响单次扫射。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/valheim/full.html#section-4-3')" class="question-row"><span class="question-number">Valheim</span><div><h3>难度倍率怎样改变防御的价值？</h3><p>从同一个护甲公式，看格挡与承伤的非线性变化。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>

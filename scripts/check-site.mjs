@@ -45,8 +45,8 @@ for (const entry of articles) {
   const download = await readFile(path.join(root, `downloads/${entry.download}`))
   assert.deepEqual(download, original, `${entry.slug} 下载文件应与原始 Markdown 完全一致`)
   const article = await read(path.join(root, `${entry.slug}/full.html`))
-  for (let i = 0; i <= 14; i++) assert.ok(article.includes(`id="section-${i}"`), `缺少第 ${i} 节`)
-  for (const appendix of ['A', 'B', 'C', 'D']) assert.ok(article.includes(`id="appendix-${appendix}"`), `缺少附录 ${appendix}`)
+  for (let i = 0; i < (entry.sections ?? 15); i++) assert.ok(article.includes(`id="section-${i}"`), `缺少第 ${i} 节`)
+  for (const appendix of entry.appendices ?? ['A', 'B', 'C', 'D']) assert.ok(article.includes(`id="appendix-${appendix}"`), `缺少附录 ${appendix}`)
   assert.ok(article.includes('role="region"') && article.includes('tabindex="0"'), '表格应支持键盘横向滚动')
   for (const [name, alt] of Object.entries(entry.images ?? {})) {
     assert.ok(article.includes(`alt="${alt}"`), `缺少图表说明：${name}`)

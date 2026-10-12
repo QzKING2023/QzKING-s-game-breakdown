@@ -17,8 +17,9 @@ Windows PowerShell 如限制 npm 脚本，可把命令中的 `npm` 换成 `npm.c
 
 ## 更新内容
 
-- 完整文章：编辑根目录的 `Valheim战斗系统拆解案.md` 或 `BF6_Gunplay_拆解案.md`。根目录原稿是全文唯一的内容来源，不要编辑生成的 `docs/valheim/full.md` 或 `docs/bf6/full.md`。修改原稿后重新启动预览或运行构建。
-- 导读：编辑 `docs/valheim/index.md` 或 `docs/bf6/index.md`。
+- 完整文章：编辑根目录的 `Valheim战斗系统拆解案.md`、`BF6_Gunplay_拆解案.md` 或 `ASW角色变迁拆解案.md`。根目录原稿是全文唯一的内容来源，不要编辑生成的 `docs/*/full.md`。修改原稿后重新启动预览或运行构建。
+- 导读：编辑 `docs/valheim/index.md`、`docs/bf6/index.md` 或 `docs/asw/index.md`。
+- 研究资料：`research/` 只保存在本地（已加入 `.gitignore`），不随网站发布。
 - BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与原稿中的相对路径对应。构建时自动复制到全文与下载目录。
 - 个人介绍和联系方式：编辑 `docs/about.md`。
 - 首页：编辑 `docs/.vitepress/theme/HomePage.vue`。
