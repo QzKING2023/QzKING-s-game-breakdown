@@ -52,9 +52,9 @@ for (const entry of articles) {
     assert.ok(article.includes(`alt="${alt}"`), `缺少图表说明：${name}`)
     const sourceImage = await readFile(new URL(`../${entry.assetDirectory}/${name}`, import.meta.url))
     const downloadImage = await readFile(path.join(root, 'downloads', entry.assetDirectory, name))
-    assert.deepEqual(downloadImage, sourceImage, `下载原稿配图不一致：${name}`)
+    assert.deepEqual(downloadImage, sourceImage, `下载文件配图不一致：${name}`)
   }
 }
 const about = await read(path.join(root, 'about.html'))
 assert.ok(about.includes('mailto:Q1625732064@outlook.com') && about.includes('185872494'))
-console.log(`检查通过：${pages.length} 个页面，${count} 个站内链接与资源；章节锚点、联系方式、原稿下载完整。`)
+console.log(`检查通过：${pages.length} 个页面，${count} 个站内链接与资源；章节锚点、联系方式、Markdown 下载完整。`)

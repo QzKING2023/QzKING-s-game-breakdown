@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises'
 import { articles } from './articles.mjs'
 
-// The author's Markdown remains the only source of truth for the full article.
+// The root Markdown file remains the only source of truth for the full article.
 for (const entry of articles) {
   const source = new URL(`../${entry.source}`, import.meta.url)
   const original = await readFile(source, 'utf8')
@@ -11,7 +11,7 @@ for (const entry of articles) {
   await mkdir(new URL(`../docs/${entry.slug}/`, import.meta.url), { recursive: true })
   await mkdir(new URL('../docs/public/downloads/', import.meta.url), { recursive: true })
   if (entry.assetDirectory) {
-    // Keep the manuscript's relative images usable both on the site and in downloads.
+    // Keep the source file's relative images usable both on the site and in downloads.
     for (const target of [`docs/${entry.slug}`, 'docs/public/downloads']) {
       const destination = new URL(`../${target}/${entry.assetDirectory}/`, import.meta.url)
       await mkdir(destination, { recursive: true })
@@ -34,5 +34,5 @@ pageClass: full-article
 
 ${article}`)
   await writeFile(new URL(`../docs/public/downloads/${entry.download}`, import.meta.url), original)
-  console.log(`已从原稿生成 ${entry.slug} 全文页面及下载文件。`)
+  console.log(`已从源文件生成 ${entry.slug} 全文页面及下载文件。`)
 }

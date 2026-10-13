@@ -1,4 +1,4 @@
-// Root manuscripts and their assets are the only sources for full articles.
+// Root Markdown files and their assets are the only sources for full articles.
 export const articles = [
   {
     slug: 'asw',

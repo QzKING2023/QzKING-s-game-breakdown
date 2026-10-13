@@ -30,8 +30,8 @@ import { withBase } from 'vitepress'
         <div class="work-copy">
           <div class="tags"><span>2D 格斗</span><span>系列演变</span><span>文件取证</span></div>
           <h2 id="asw-title">格斗游戏变简单了，<br>深度去了哪里？</h2>
-          <p>以 Sol、Zato、Ragna、Rachel 四个角色的历代变化为线索，讨论 Arc System Works 如何降低门槛，又保留了哪些深度。</p>
-          <p class="work-method">原稿结合 Dustloop 帧数与连段数据、游戏脚本与碰撞文件、官方补丁说明，把执行难度与决策难度分开比较。</p>
+          <p>以 Sol、Zato、Ragna、Rachel 四个角色的历代变化为线索，看 Arc System Works 怎样降低门槛，又保留了哪些深度。</p>
+          <p class="work-method">依据 Dustloop 帧数与连段数据、游戏脚本与碰撞文件和官方补丁说明，把执行难度与决策难度分开比较。</p>
           <div class="work-actions"><a class="primary-link" :href="withBase('/asw/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/asw/full.html')">直接阅读全文</a></div>
         </div>
       </div>
@@ -48,8 +48,8 @@ import { withBase } from 'vitepress'
         <div class="work-copy">
           <div class="tags"><span>第一人称射击</span><span>枪械机制</span><span>实测分析</span></div>
           <h2 id="bf6-title">同样的压枪，<br>为何打出不同的结果？</h2>
-          <p>以《战地风云 6》为对象，拆开伤害、射速、随机后坐力与扩散，讨论枪械机制如何影响命中、有效射程与玩家反馈。</p>
-          <p class="work-method">原稿结合文件取证、实测录像、数值模拟与版本对照，追问枪法练习与随机性之间的关系。</p>
+          <p>拆开《战地风云 6》的伤害、射速、随机后坐力与扩散，看枪械机制怎样影响命中、有效射程和玩家反馈。</p>
+          <p class="work-method">通过文件取证、实测录像、数值模拟和版本对照，检验枪法练习与随机性之间的关系。</p>
           <div class="work-actions"><a class="primary-link" :href="withBase('/bf6/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/bf6/full.html')">直接阅读全文</a></div>
         </div>
       </div>
@@ -66,8 +66,8 @@ import { withBase } from 'vitepress'
         <div class="work-copy">
           <div class="tags"><span>生存建造</span><span>动作战斗</span><span>系统拆解</span></div>
           <h2 id="work-title">一套完整的战斗循环，<br>为何逐渐失去吸引力？</h2>
-          <p>以 Valheim 为对象，从伤害结算、跨区域遭遇和资源成本出发，讨论近战、远程与召唤系之间的风险收益差异。</p>
-          <p class="work-method">原稿结合代码分析、预制体数值与遭遇战模拟，沿着游玩中的问题逐层展开。</p>
+          <p>从 Valheim 的伤害结算、跨区域遭遇和资源成本出发，比较近战、远程与召唤系之间的风险收益差异。</p>
+          <p class="work-method">从代码、预制体数值和遭遇战模拟入手，沿着游玩中遇到的问题逐层展开。</p>
           <div class="work-actions"><a class="primary-link" :href="withBase('/valheim/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/valheim/full.html')">直接阅读全文</a></div>
         </div>
       </div>

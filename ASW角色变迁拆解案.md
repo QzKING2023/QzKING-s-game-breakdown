@@ -4,7 +4,7 @@
 
 > **核心结论**：格斗游戏并没有走向“快餐化”。Arc System Works（下称 ASW）这些年面对的问题是：怎样在变得更简单的同时，保住系统的深度。从四个角色的历代变化看，ASW 先后走过“外挂简易模式”和“直接改系统”两条路；基准角色的核心连段确实变容易了，高难角色的核心机制却一直保留；连段的角色限定只在 Guilty Gear 一线被系统性地削减，BlazBlue 正作始终是一款高难度的游戏。
 >
-> 本文依据四类证据：
+> 本文依据五类证据：
 >
 > - Dustloop Wiki 的帧数表、连段页与系统页（Cargo 数据库导出与页面原文）；
 > - 按统一口径对 4 个角色、各代主力连段的逐段拆分；
@@ -64,11 +64,11 @@ ASW 很适合用来观察这个问题。它的两个招牌系列 Guilty Gear（�
 2. **Xrd REVELATOR 加入了 Stylish**。它不影响 REV 2 的帧数数据，但在简易模式的时间线上是一个节点。
 3. **Strive Ver.2.00 是实打实的系统改动**：限制 Roman Cancel、移除 Wild Assault、加入 Counter Blitz、统一受创判定。原版与 2.00 的差异本身就是论据。
 
-CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样本，CP 1.x 的页面只作参照。需要注意，BBCPE 帧数页自己声明，发生、持续、收招等计时数值大多沿用 CP 1.10 / 1.1。
+CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样本，CP 1.x 的页面只作参照。BBCPE 帧数页自己声明，发生、持续、收招等计时数值大多沿用 CP 1.10 / 1.1。
 
 ### 1.4 怎么衡量“难度”
 
-格斗游戏的难度分两层，写作中始终分开：
+格斗游戏的难度分两层，本文始终分开讨论：
 
 - **执行层**：手上功夫。连段的衔接窗口、指令复杂度、输入缓冲、取消规则。
 - **决策层**：脑子里的功夫。资源怎么分配、什么时候用什么系统、对专属机制的理解、立回中的判断。
@@ -82,17 +82,17 @@ CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样
 | J | 空中追打：对手浮空后再打中 | 只能算上界：受身不能时间 − 本招剩余硬直 − 下一招发生 + 1。实际窗口还受高度、距离、重力和受创递减影响 |
 | D | 延迟、空振、位置依赖：`dl.`、whiff、微冲、特定高度 | 不能 |
 
-此外，每套连段还记录六个帧数以外的维度：限定条件（反击、板边、角色、补正阈值）、确认难度、指令复杂度、资源消耗、失误代价，以及 Dustloop 编者给的难度标注。难度标注由各页编者主观填写，只能在同一作品内部参考。
+每套连段另外记录六个帧数以外的维度：限定条件（反击、板边、角色、补正阈值）、确认难度、指令复杂度、资源消耗、失误代价，以及 Dustloop 编者给的难度标注。难度标注由各页编者主观填写，只能在同一作品内部参考。
 
-做完拆分后，一个事实很快浮现：**4 个角色、各代主力连段的衔接几乎全是取消**，能按帧数表算出窗口的地面目押，全部样本里只有一处，而且它来自社区资料、按统一公式其实算不出来。难点集中在空中追打和延迟、位置依赖上，而 Xrd、Strive、BBCT 的帧数数据缺受身不能时间，连空中追打的上界都算不出。所以本文第 6 节的主要证据是衔接构成、连段长度、延迟数和限定条件；帧数窗口只在少数算得出的地方作佐证，并一律注明是上界。
+拆分的结果是：**4 个角色、各代主力连段的衔接几乎全是取消**，能按帧数表算出窗口的地面目押，全部样本里只有一处，而且它来自社区资料、按统一公式其实算不出来。难点集中在空中追打和延迟、位置依赖上，而 Xrd、Strive、BBCT 的帧数数据缺受身不能时间，连空中追打的上界都算不出。所以本文第 6 节的主要证据是衔接构成、连段长度、延迟数和限定条件；帧数窗口只在少数算得出的地方作佐证，并一律注明是上界。
 
 帧数表还漏掉了两项影响手感的因素：帧顿和输入缓冲。§6.2 从游戏文件中读出这两项，单独比较。
 
-另外要强调：**入门连段不能用来衡量门槛**。Sol、Zato、Ragna 历代都有 Very Easy 级别的纯取消连段，包括被 Dustloop 称为“可能是本作中最复杂的角色”的 Strive 中的 Zato。真正要看的是 **Core BnB**：角色稳定发挥时实际使用的核心连段。本文的取法是：优先取页面明确称为 BnB、main combo、go-to、most important 的连段，其次取 Core Combos 一节的第一条无资源路线，不取 Beginner 档。
+**纯粹入门的连段不能用来衡量门槛**。Sol、Zato、Ragna 历代都有 Very Easy 级别的纯取消连段，包括被 Dustloop 称为“可能是本作中最复杂的角色”的 Strive 中的 Zato。真正要看的是 **Core BnB**：角色实际对战中最常使用的、稳定的核心连段。本文的取法是：优先取页面明确称为 BnB、main combo、go-to、most important 的连段，其次取 Core Combos 一节的第一条无资源路线，不取 Beginner 档。
 
 ### 1.5 局限
 
-- 作者对早期作品没有大量实机经验。执行层的结论依赖 Dustloop 数据，决策层的结论依赖社区共识与官方说明，文中都标明来源。
+- 我对早期作品没有大量实机经验。执行层的结论依赖 Dustloop 数据，决策层的结论依赖社区共识与官方说明，文中都标明来源。
 - Dustloop 大多只收各作的最终版本，看不到代内变化；Strive 页面反映的是 2.00 之后的状态。
 - Dustloop 各页面由不同编者在不同年份维护，写法差别很大。注释多少不等于游戏里实际限定多少（详见 §6.3）。
 - 所有窗口计算只到上界，未扣受创递减、冲刺帧数和高度影响。
@@ -106,9 +106,9 @@ CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样
 
 初代 GG（1998）的系统还很粗糙。Dustloop 的 GGML 系统页没有 Roman Cancel 和 Burst 的条目，却有一个“Charge Cancel”：通常技可以取消成蓄力动作，松键即结束，“essentially serve to remove all recovery”（基本等于抹掉收招）。这是多数角色无限连的来源。Sol 的标准无限连是 `[f.S/c.S > 5H(1) > 623R > 66]xN`，Dustloop 称其“very lenient”；Zato 的同类无限连 `[c.S > 5H > 22R, 66, c.S]xN` 甚至是这一代 Zato 唯一的 BnB。
 
-初代 Sol 被社区归为“执行门槛友好”的波升型角色。初代 Zato 还不是人偶角色，影子不能独立行动，按牵制型设计。
+初代 Sol 被社区归为“执行门槛友好”的波升型角色。而初代 Zato 还不是人偶型角色，影子不能独立行动，被认为是牵制型角色。
 
-GGX 确立了 Zato 的人偶原型：236X 召唤影子，影子靠**反向输入**（松开按键）出招，被打会被强制收回。Dustloop 把执行列为缺点：“Controlling the shadow effectively requires a strong grasp of both Negative Edge inputs and timing its attacks alongside Zato's”。GGX 的帧数表没有命中有利帧和受创硬直，Steam 上也买不到，本文不作数据比较。
+GGX 确立了 Zato 的人偶角色原型：236X 召唤影子，影子靠**反向输入**（松开按键）出招，被打会被强制收回。Dustloop 把执行列为缺点：“Controlling the shadow effectively requires a strong grasp of both Negative Edge inputs and timing its attacks alongside Zato's”。GGX 的帧数表没有命中有利帧和受创硬直，Steam 上也买不到，本文不作数据比较。
 
 ### 2.2 GGXX AC+R：复杂度的高点
 
@@ -140,7 +140,7 @@ Sol 页面称 Gun Flame FRC“is one of Sol's best uses of meter”，窗口是 
 两位角色在这一代的状态：
 
 - **Sol**：回报高，但部分确认偏难。板边 BnB 就是著名的 Dustloop（`5K(1)/c.S > 6P, (delay) 5H > j.D, j.D ▷ j.D, j.D ▷ dash j.S > j.D > dj.S > j.D > SVV > KD`），Dustloop 标 Medium，附一份 19 人的适用名单，并按对手体重规定延迟量，“very light characters, only one rep”。
-- **Eddie**：影子槽 8000 点，待机每帧耗 8 点；主动收回进快速回复（286 帧回满，随时可再召唤），影子被打或槽耗尽进慢速回复（445 帧回满，回满前不能召唤）。成名绝技是板边不可防：Vice 影子掩护崩防后 5D 追击、延迟 Shadow Gallery 只打一段击倒、FRC（3F 窗口），再放地雷形成不可防。不同路线还能接成循环，Potemkin 专用的一条“只要有 Tension 就能循环到对手死亡”。
+- **Eddie**：影子槽 8000 点，待机每帧耗 8 点；主动收回进快速回复（286 帧回满，随时可再召唤），影子被打或槽耗尽进慢速回复（445 帧回满，回满前不能召唤）。Eddie 在这一代的成名绝技是不可防循环：多种不同起手最终都能形成不可防的 set，而不同路线之间还能够相互衔接—— Potemkin 还有专用的一条“只要有 Tension 就能循环到对手死亡”的不可防套路。这些路线的共同点是：**都用了 FRC**。
 
 ---
 
@@ -148,16 +148,16 @@ Sol 页面称 Gun Flame FRC“is one of Sol's best uses of meter”，窗口是 
 
 ### 3.1 BBCT（2008）
 
-BBCT 发售时**没有**简易操作模式。Kotaku 在 2010 年评价 CT 家用版对新手很难，直到 CS 才加入 Beginner Mode。
+BBCT 发售时没有简易操作模式。Kotaku 在 2010 年评价 CT 家用版对新手很难，直到 CS 才加入 Beginner Mode。
 
 - **Ragna**：Dustloop 称他“大概是最容易上手的角色”，“combos are simple, low execution, and very damaging”。入门连段 `5B > 5C > 214A~214D` 标 Very Easy；Core 一节的第一条「5D > 6A Link」标 Easy，10 个招式输入，含一处冲刺取消后的目押（`5D dc 6A`），对 Carl、Arakune 板中无效。标志性的 Driveloop 需要反击起手、两处“maximum delay”，并且要“character to character depending on hurtbox size”地调整，标 Hard。
-- **Rachel**：风槽配合 5B、3C 快速打掉 Guard Libra，不花 Heat 就能破防；风推动 Pumpkin、George 等设置物构成牵制。Dustloop 没有 CT Rachel 的连段页，现有连段只来自 BlazBlue Fandom 的二手资料，本文只作结构参考。
+- **Rachel**：风槽配合 5B、3C 快速打掉 Guard Libra，不花 Heat 就能破防；风推动 Pumpkin、George 等飞行道具构成板面上的牵制。Dustloop 没有 CT Rachel 的连段页，现有连段只来自 BlazBlue Fandom 的二手资料，本文只作结构参考。
 
 CT 的帧数数据也有缺口：Rachel 的受创硬直、防御硬直、受身不能时间全空，Ragna 的也大多缺失。CT 基本不能参与窗口比较。
 
 ### 3.2 CS 世代（2009–2011）
 
-2010 年 BBCS 家用版首次加入 **Beginner Mode**：单键出必杀，连按出预设连段。CSE 改名为 **Stylish Mode**，竞技中不用。值得注意的是，CSE 的 Stylish 会**禁用 Burst**。
+2010 年 BBCS 家用版首次加入 **Beginner Mode**：单键出必杀，连按出预设连段。CSE 改名为 **Stylish Mode**，竞技中不用。CSE 的 Stylish 还会禁用 Burst。
 
 系统层面，Burst 从 CT 的“和 Barrier 槽绑定、用后本回合一直处于 Danger 状态”改成图标计数（开局 1 个，每输一回合再得 1 个，整场最多 2 个）；Counter Assault 会让本回合最大 Guard Primer 永久 −1。防御系统的代价从“当下”拉长到“整个回合”。这些数据 Dustloop 注明来自 CS2，CSE 是否有改动无法确认。
 
@@ -168,9 +168,9 @@ CT 的帧数数据也有缺口：Rachel 的受创硬直、防御硬直、受身�
 
 ### 3.3 BBCP 与 CP Extend（2012–2015）
 
-CP 的系统改动集中在 Burst：Burst 槽改为会回复、跨回合保留；中立时同一个指令变成 **Overdrive**，取代了 Gold Burst。Overdrive 中的连段不能被 Burst。另外新增 **Crush Trigger**（25 Heat）。决策从“这一个 Burst 用在哪”变成“这一槽留着防守，还是开 Overdrive 抢回合”。CP 的 Stylish 会**禁用 Rapid Cancel**。
+CP 的系统改动集中在 Burst：Burst 槽改为会回复、跨回合保留；中立时同一个指令变成 **Overdrive**，取代了 Gold Burst。Overdrive 中的连段不能被 Burst。另外新增 **Crush Trigger**（25 Heat）。决策从“这一个 Burst 用在哪”变成“这一槽留着防守，还是开 Overdrive 抢回合”。CP 的 Stylish 会禁用 Rapid Cancel。
 
-**Ragna**：BBCPE 板边连段 `5B > 5C > 623D >> 236C >> 236C > 2C > 5C > 5D > 236D > 2C > 5C > 5D > 22C > 214A >> 214D`（4008 伤害，无前提），15 个招式输入，全程在地面，没有冲刺取消和跳跃取消，Dustloop 原文也没有延迟标记。难点在 Dead Spike（236D）：它必须**晚命中**，持续最后一帧命中时 `236D > 2C` 的上界是 6F，持续第一帧命中则接不上。
+**Ragna**：BBCPE 板边连段 `5B > 5C > 623D >> 236C >> 236C > 2C > 5C > 5D > 236D > 2C > 5C > 5D > 22C > 214A >> 214D`（4008 伤害，无前提），15 个招式输入，全程在地面，没有冲刺取消和跳跃取消，Dustloop 原文也没有延迟标记。难点在 Dead Spike（236D）：它必须晚命中，持续最后一帧命中时 `236D > 2C` 的上界是 6F，持续第一帧命中则接不上。
 
 **Rachel**：CP 1.x 的 6A 不再自带浮空，开连段必须先花一格风，而且要在确认前就花，被防就浪费。Dustloop 写她“Extremely reliant on wind”，并建议为了回风“intentionally throw away a chance for a more damaging combo path”。CP Extend 的板边连段 `5B > 5CC dash 6A jc j.C > j.236C land 5B > 6A > 236A 6A > 4B 6A > BBL summon` 则有两个变化：
 
@@ -190,17 +190,17 @@ CF 在 CP 的基础上继续加：Burst 只能在被打时用，防御中改用 
 
 ### 3.5 小结
 
-BB 正作的门槛靠外挂模式降低，系统本身没有变简单，反而在 Burst 一侧一路加选项。主角本来就容易上手；高难角色的资源管理始终是核心。各角色体型差异大，到 BBCF 仍有大量角色限定连段（见 §6.3）。
+BB 正作的门槛靠外挂的“帅气模式”降低，系统本身没有变简单，反而在 Burst 一侧一路加选项。主角本来就容易上手；高难角色的资源管理始终是核心。各角色体型差异大，到 BBCF 仍有大量角色限定连段（见 §6.3）。
 
 ---
 
-## 4. GG 线：从外挂到改系统
+## 4. GG 线：从“外挂”简易模式到改系统
 
 ### 4.1 Xrd REV 2（2017）
 
-Xrd 在系统上做了一次重要的替换：系统页里**没有 FRC 了**，取而代之的是三色 RC。其中黄 RC 只花 25%，在攻击起手或持续帧前段几乎随时能用，还附带让对手减速，能接出平时接不上的连段。AC+R 里靠 2 帧窗口换来的便宜取消，变成了“什么时候花这 25% 最划算”的判断。石渡太辅事后也说，Xrd 的 RC“自由度太高”。防守一侧，Slashback 从系统页消失，换成 1 帧发动的 Blitz Shield（25%）。
+Xrd 在系统上做了一处替换：系统页里没有 FRC 了，取而代之的是三色 RC。其中黄 RC 只花 25%，在攻击起手或持续帧前段几乎随时能用，还附带让对手减速，能接出平时接不上的连段。AC+R 里靠 2 帧窗口换来的便宜取消，变成了“什么时候花这 25% 最划算”的判断。石渡太辅事后也说，Xrd 的 RC“自由度太高”。防守一侧，Slashback 从系统页消失，换成 1 帧发动的 Blitz Shield（25%）。
 
-2016 年的 REVELATOR 让 GG 系列**首次**加入 Stylish：多一个 SP 键出必杀和超必杀，连按自动连段，站着不动自动防中上段。代价是受到的伤害 +20%，部分无敌技用 SP 键出时失去无敌。竞技中不用。
+2016 年的 REVELATOR 让 GG 系列首次加入 Stylish：多一个 SP 键出必杀和超必杀，连按自动连段，站着不动自动防中上段。代价是受到的伤害 +20%，部分无敌技用 SP 键出时失去无敌。竞技中不用。
 
 - **Sol**：板中 Core 1 是“Sol's main punish midscreen”，7 个招式输入，Medium，但逐个点名了 13 个要改做法的对手。板边仍是 Dustloop，“Sol's iconic BNB dating back to XX”，12~13 个招式输入，Medium，“The delay on 5H is character specific”。Xrd 的帧数数据没有受身不能时间，两套连段的空中衔接都算不出窗口。
 - **Zato**：Zato 按下按键出招，Eddie 松开按键出招，二者“independently and simultaneously”行动；Eddie 不受 Zato 打击停顿的影响。Eddie 槽上限 6000，待机每帧耗 10；Eddie 被打则槽归零变红，约 6 秒回满，期间不能召唤。Dustloop 把“High difficulty”列为缺点，Xrd 的连段页至今是未完成的空壳。
@@ -215,9 +215,9 @@ Strive 是这条线的分界点。石渡在 ArcREVO 2019 的访谈中提到，�
 
 ### 4.3 Strive 中的两位角色
 
-**Sol**：主角定位不变，连段和回报结构大幅简化（数据见 §6.1）。板中 Core 2 只有 5 个招式输入，“Sol's main combo route off of non-P or K starters”，Easy；板边 Core 3 有 9 个，“The main combo, now in the corner”，Easy。Core 3 用的是自动定时的 Clean Hit Fafnir，页面甚至劝玩家不要换成手动定时：伤害差距“minuscule”，而掉连段的风险“outweighs the benefits”。但难点并没有全部消失：“only 1 normal can be used before 5K will fail to juggle”，所以“Can be difficult to hit confirm without a Counter Hit”。
+**Sol**：主角定位不变，连段和回报结构大幅简化（数据见 §6.1）。板中 Core 2 只有 5 个招式输入，“Sol's main combo route off of non-P or K starters”，Easy；板边 Core 3 有 9 个，“The main combo, now in the corner”，Easy。Core 3 用的是固定最速就能打出的 Clean Hit Fafnir，Wiki 甚至建议玩家不要手动延迟 Fafnir：伤害差距“minuscule”，而掉连段的风险“outweighs the benefits”。但难点并没有全部消失：“only 1 normal can be used before 5K will fail to juggle”，所以“Can be difficult to hit confirm without a Counter Hit”。
 
-**Zato**：可以随时用 214H 召唤、收回 Eddie，236X 召唤的同时直接出招。反向输入**仍然保留**，但有了明文规则：“Eddie's Negative Edge inputs have the standard 4 frames of input buffer”，同帧松开多键按 P>K>S>H>D 优先，Eddie 的反向输入动作“treated as a link”。降低的是召唤和控制 Eddie 的门槛，核心操作没有被拿掉。Dustloop 称他“Perhaps the most complex character in the roster”；核心连段「"Oppose" Anti-Air Combo」被称为“the core of Zato's sandwich BNBs”，标 Hard，并注明难度标注以熟悉 Eddie 的移动和反向输入为前提。Strive 还带来了新问题：防御时同时按两个攻击键就是 FD，而 Zato 常常按住多个键，会意外进 FD，导致不能后走。
+**Zato**：可以随时用 214H 召唤、收回 Eddie，236X 召唤的同时直接出招。反向输入仍然保留，但有了明文规则：“Eddie's Negative Edge inputs have the standard 4 frames of input buffer”，同帧松开多键按 P>K>S>H>D 优先，Eddie 的反向输入动作“treated as a link”。降低的是召唤和控制 Eddie 的门槛，核心操作没有被拿掉。Dustloop 称他“Perhaps the most complex character in the roster”；核心连段「"Oppose" Anti-Air Combo」被称为“the core of Zato's sandwich BNBs”，标 Hard，并注明难度标注以熟悉 Eddie 的移动和反向输入为前提。Strive 还带来了新问题：防御时同时按两个攻击键就是 FD，而 Zato 常常按住多个键，会意外进 FD，导致不能后走。
 
 ### 4.4 Ver.2.00（2026-04）：回头收紧
 
@@ -232,7 +232,7 @@ Strive 发售后，系统在不断扩充。Ver.1.29（2023）把 Burst 槽变成
 
 两位角色的调整：
 
-- **Sol**：重新调整连段结构，压低中距离连段的最大回报；新增终结技 Sidewinder Ignited；扩充立回手段；Fafnir 不再撞墙反弹；删掉 Bandit Revolver → 红 RC → j.P → j.P 这一强力择的连携，理由是它超出了 Sol“打投二择”的定位。
+- **Sol**：重新调整连段结构，压低中距离连段的最大回报；新增派生技 Sidewinder Ignited；扩充立回手段；CL Fafnir 不再撞墙反弹；删掉 `Bandit Revolver → RRC → j.P → j.P` 这一强力中段择，理由是它超出了 Sol“打投二择”的定位。
 - **Zato**：Float 不再耗槽，发射缓冲提前 5 帧，轨迹更容易让 Eddie 绕到对手身后；Pierce 第二段变慢，远距离 2S 反击一下打到墙破的路线没了；Sun Void 后 Eddie 恢复变慢，被防后更难接择。
 
 此后的 Ver.2.03（2026-09-24）又专门放慢了 Eddie 主动收回后的回复，官方理由是“unsummoning Eddie to recover the gauge while sustaining strings allowed players to easily maintain powerful offense for extended periods”，要让槽管理“more critical”。
@@ -261,15 +261,15 @@ BBTag 是 BB 角色第一次走进“改过系统”的游戏。森利道对 Kot
 
 **Ragna**：Dustloop 称他是简单角色，214C 能把几乎任何命中转成完整连段。入门连段 `5AAA > 2C > 214A` 标 Very Easy。板中 Core「Meterless BnB」标 Easy，13 次按键，无角色限定、无位置限定，最紧的 `236A, 5A` 上界 10F，但同样要求 Dead Spike 晚命中，还要“have the opponent at just the right height”。Smart Combo 在这里成了手动连段的零件，而不是替代品。
 
-**Rachel**：Sylpheed 保留下来，但输入变了：没有单独的风键，改成在特定招式之后按住方向。风仍是 4 格，空中不回复，还能吹动双方的搭档。Tempest Dahlia 不再看风格数、也不再回风。攻略要求“确认下段或中段时至少要有一格风”；Dustloop 对她连段的总评是“hard by BBTag standards”，板中连段对 Es、全部 UNI 角色、全部 RWBY 角色无效。角色的特色机制和难度来源都被保留了下来。
+**Rachel**：Sylpheed 保留下来，但输入变了：没有单独的风键，改成在特定招式之后按住方向。风仍是 4 格，空中不回复，还能吹动双方的搭档。Tempest Dahlia 不再看风格数、也不再回风。攻略要求“确认下段或中段时至少要有一格风”；Dustloop 对她连段的总评是“hard by BBTag standards”，板中的部分连段对 Es、全部 UNI 角色、全部 RWBY 角色无效。角色的特色机制和难度来源都被保留了下来。
 
 ### 5.3 Ver.2.0 的思路
 
-森利道、石川辰则在 2019 年的 4Gamer 访谈中说，Ver.2.0 的 Cross Raid、Extra Assault 是给新手加的，同时希望高手也能用出花样；平衡思路是“抬高下限，而不是压低上限”。这句话可以看作 BBTag 乃至 ASW 这一时期的总纲。
+森利道、石川辰则在 2019 年的 4Gamer 访谈中说，Ver.2.0 的 Cross Raid、Extra Assault 是给新手加的，同时希望高手也能用出花样；平衡思路是“抬高下限，而不是压低上限”。BBTag 乃至 ASW 这一时期的做法，大体都能用这句话概括。
 
 ### 5.4 支线：同一套简化工具
 
-BBTag 常被说成“挪用了 DBFZ 的系统”。两作确实都是 ASW 2018 年的组队作品，都有自动连段、援护和更简单的指令，BBTag 也晚四个月发售。但 DBFZ 公布于 2017-06-11（E3），BBTag 公布于 2017-07-16（Evo），只差一个多月，开发期基本重叠。BBTag 的简化工具大多早有来源：连按同一键的自动连段可以追溯到 Persona 4 Arena（2012）和 BB 自己的 Beginner Mode（2010），通常技连携互相取消一次的 Passing Link 来自 UNI。
+BBTag 常被视作“挪用了 DBFZ 的系统”。两作确实都是 ASW 2018 年的组队作品，都有自动连段、援护和更简单的指令，BBTag 也晚四个月发售。但 DBFZ 公布于 2017-06-11（E3），BBTag 公布于 2017-07-16（Evo），只差一个多月，开发期基本重叠。BBTag 的简化工具大多早有来源：例如连按同一键的自动连段可以追溯到 Persona 4 Arena（2012）和 BB 自己的 Beginner Mode（2010）。
 
 更准确的说法是：DBFZ 和 BBTag 同期，用的是 ASW 这些年积累起来的同一套简化工具，而 BBTag 把它套在 BB 角色上时，保留了角色原有的特色机制。之后的 GBVS（2020）又加入技能键单键出必杀、以冷却时间为代价的做法。
 
@@ -292,7 +292,7 @@ BBTag 常被说成“挪用了 DBFZ 的系统”。两作确实都是 ASW 2018 �
 | Strive 板中 | Core 2 | 5 | C3 / J1 / D0 | 不可算 | 0 | 只能 1 个普通技起手；没有反击时难确认 | Easy |
 | Strive 板边 | Core 3 | 9 | C5 / J3 / D0 | 不可算 | 0（自动定时） | 板边；起手同上 | Easy |
 
-Sol 的证据比较充分：到 Strive，招式数、手动延迟、角色限定三项同时下降，页面主动推荐自动定时的路线。需要补充两点。第一，下降只发生在 Strive：板中的角色限定在 AC+R → Xrd 之间反而增加了（Works on Everyone → 点名 13 人）。第二，Strive 的难点部分转到了确认（“只能 1 个普通技”），确认难度没有统一计量。Xrd、Strive 缺受身不能数据，窗口层面没有可比的数字。
+Sol 的证据比较充分：到 Strive，招式数、手动延迟、角色限定三项同时下降，页面推荐了自动定时的路线。需要补充两点。第一，下降只发生在 Strive：板中的角色限定在 AC+R → Xrd 之间反而增加了（Works on Everyone → 点名 13 人）。第二，Strive 的难点部分转到了确认（“只能 1 个普通技”），确认难度没有统一计量。Xrd、Strive 缺受身不能数据，窗口层面没有可比的数字。
 
 **Ragna the Bloodedge**
 
@@ -307,7 +307,7 @@ Sol 的证据比较充分：到 Strive，招式数、手动延迟、角色限定
 | BBTag 板中 | Core「Meterless BnB」 | 13（按键） | C6 / J1 / D1 | `236A, 5A` ≤10F，须晚命中 | 1 | 无角色、位置限定 | Easy |
 | BBTag 板边 | Core「Meterless 5A Corner BnB」 | 约 14（按键） | 以取消为主，J1、D1 | 未算 | 1 | 板边 | Easy |
 
-Ragna 的下降方式和 Sol 不同。正作的 Core BnB **没有变短**，CSE 之后反而更长；“按补正值 / 连段时长切换路线”的要求从 CSE 到 CF 一直存在。下降体现在两处：一是最紧窗口放宽，CP Extend 的 Dead Spike 晚命中只有 ≤6F，CF 板中的 Spin Kick 后续宽到 ≤19F，标注也都是 Easy；二是选定的 Core 条目里角色限定消失了（CT 有，CP Extend、CF、BBTag 没有）。BBTag 才把指令整体压缩，但晚命中、打到合适高度这类要求仍在。另外，CT 的 Ragna 起点就很低，正作内部本来没有多少下降的空间。
+Ragna 的下降方式和 Sol 不同。正作的 Core BnB 没有变短，CSE 之后反而更长；“按补正值 / 连段时长切换路线”的要求从 CSE 到 CF 一直存在。下降体现在两处：一是最紧窗口放宽，CP Extend 的 Dead Spike 晚命中只有 ≤6F，CF 板中的 Spin Kick 后续宽到 ≤19F，标注也都是 Easy；二是选定的 Core 条目里角色限定消失了（CT 有，CP Extend、CF、BBTag 没有）。BBTag 才把指令整体压缩，但晚命中、打到合适高度这类要求仍在。另外，CT 的 Ragna 起点就很低，正作内部本来没有多少下降的空间。
 
 **高难角色（对照）**
 
@@ -347,7 +347,7 @@ GG 三代的帧顿表完全相同，Strive 与 Xrd 的平均帧顿也几乎一�
 
 结果是：
 
-- **Strive** 的 S、H 系通常技脚本里**没有** `recoveryState`，P、K 系有。这正好对应 Dustloop 的规则：S、H 系整个收招都能取消，P、K 系受限。
+- **Strive** 的 S、H 系通常技脚本里没有 `recoveryState`，P、K 系有。这正好对应 Dustloop 的规则：S、H 系整个收招都能取消，P、K 系受限。
 - **Xrd** 是逐招设定：Sol c.S 收招后还有 10 帧、6P 16 帧、2D 20 帧可以取消，f.S、2S 只有 2 帧；Zato 的通常技多为 3~4 帧。
 - **BBCF** 也会延伸到收招里：Ragna 5B、2B、3C 各 3 帧，5C、2C 各 2 帧，2D 8 帧；Rachel 5B 1 帧，6A 5 帧，5C 4 帧。Dustloop 的 Ragna 页把 5A、5B、5C、2A、2B 标为“Can late chain”（帧顿结束后过一会儿再派生），与此吻合。
 
@@ -377,13 +377,13 @@ Strive 的 P、K 系给的是区间：小的值按 Dustloop 的“只能在持�
 | Strive | 5 帧；Eddie 的松键同为 5 帧 | 2(5) 3(10) 6(9) | Dustloop |
 | BBCF | 按住攻击键时每帧重复输入，最多 4 帧 | 未记载 | Dustloop |
 
-Xrd → Strive，按键缓冲从 3 帧增加到 5 帧，搓招的逐步时限几乎没变。Strive 放宽的是“按键时机”，不是“搓招”。BBCF 的缓冲是另一种思路：不是按下后记住几帧，而是“提前按住”才生效。Dustloop 的原话是，提前按住，“that 1F link usually becomes a 4F link”，“some combos rely on Advanced Input to work at all”。玩家要先知道“得按住”，这本身就是一条知识门槛。
+Xrd → Strive，按键缓冲从 3 帧增加到 5 帧，搓招的逐步时限几乎没变，Strive 放宽的只是按键时机。BBCF 的缓冲是另一种思路：不是按下后记住几帧，而是“提前按住”才生效。Dustloop 的原话是，提前按住，“that 1F link usually becomes a 4F link”，“some combos rely on Advanced Input to work at all”。玩家要先知道“得按住”，这本身就是一条知识门槛。
 
 **小结**：GG 三代的帧顿没有变。Xrd 到 Strive 的放宽靠的是缓冲（3 → 5 帧）、更长的持续帧，以及把“收招中可取消”从逐招设定改成 S、H 系的通用规则；轻攻击的确认窗口和搓招时限都没有变。Ver.2.00 的“收紧”也没有动帧顿。BBCF 的帧顿每一级比 GG 短 3 帧、缓冲要靠按住，但收招里留有几帧取消时间，确认窗口与 Xrd 同档，BB 的难度并不主要来自“确认时间更短”。
 
 ### 6.3 角色限定：GG 收窄，BB 不变
 
-格斗游戏的连段常常“只对某些角色成立”：对手的体重、受创判定、空中受创判定不同，同一套连段的延迟量、能打几轮、能不能接上都会变。这类限定是门槛的一部分：玩家不光要会打，还要记住对谁怎么打。
+较旧的格斗游戏（尤其是 ASW 的游戏）的连段常常“只对某些角色成立”：对手的体重、受创判定、空中受创判定不同，同一套连段的延迟量、能打几轮、能不能接上都会变。这类限定是门槛的一部分：玩家不光要会打，还要记住对谁怎么打。
 
 为了看这类门槛的跨代变化，本文统计了 Dustloop 连段页中带角色限定注释的条目比例。范围是四个研究角色的全部可得连段页，另取同作的对照角色（GG：Ky、Potemkin、May；BB：Jin、Noel、Hakumen、Taokaka），避免只看四个角色造成偏差。一个连段条目算 1 条；关键词识别“does not work on”“only works on”“character specific”“weight”“hurtbox”、其他角色名等，以及编者填写的“Works on”栏。人工抽查 40 条，精确率约 88%。
 
@@ -412,9 +412,13 @@ Xrd → Strive，按键缓冲从 3 帧增加到 5 帧，搓招的逐步时限几
 
 这段话也说明，2.00 之前的 Strive 同样存在角色限定问题；Dustloop 页面只能反映 2.00 之后的状态。
 
-**BB 线没有趋势**：CSE 18%、CP 1.x 22%、CP Extend 10%、CF 22%、BBTag 14%。CF 的 Ragna 页是 31%，是 BB 研究角色里最高的。BB 各作的受创判定差异一直存在；CF 和 BBTag 统一的只是 Combo Rate（CF 全员 60%、BBTag 全员 80%），它只影响伤害，不影响连段能否成立。Rachel 页的比例看起来偏低（CF 6%），但她的角色限定大量写在长篇说明里，例如一条路线“does not work on: Arakune, Carl, Es, Hakumen, Jin, Nine, Noel, Tager, Taokaka, Lambda, Mu, Nu”，按条目计数会低估。BB 系列一直是较高难度的格斗游戏，各角色体型不同，到 BBCF 仍有大量角色限定，这一点没有随着代数改变。
+**BB 线没有趋势**：CSE 18%、CP 1.x 22%、CP Extend 10%、CF 22%、BBTag 14%。CF 的 Ragna 页是 31%，是 BB 研究角色里最高的（主要来源是 Nightkasu：这是每个角色都有单独路线的角色限定连）。
 
-**位置和时机的要求也没有减少**。两条线的板边连段占比各作都在 20%~40% 之间波动；GG 线标注距离、高度要求的注释反而上升（研究角色 8% → 19% → 33%），一部分来自 Strive Clean Hit 体系新加的高度要求。标注“延迟”的条目也没有减少（GG 研究角色 27% → 44% → 41%）。所以能确定的只是：**GG 线把“角色差异”这一类门槛系统性地削减了**；至于手上功夫是否被判断取代，数据看不出来。
+BB 各作的受创判定差异一直存在；CF 和 BBTag 统一的只是 Combo Rate（CF 全员 60%、BBTag 全员 80%），它只影响伤害，不影响连段能否成立。
+
+Rachel 页的比例看起来偏低（CF 6%），但她的角色限定大量写在长篇说明里，例如一条路线“does not work on: Arakune, Carl, Es, Hakumen, Jin, Nine, Noel, Tager, Taokaka, Lambda, Mu, Nu”，按条目计数会低估。各角色体型不同，到 BBCF 仍有大量角色限定，这一点没有随代数改变。
+
+**位置和时机的要求也没有减少**。两条线的板边连段占比各作都在 20%~40% 之间波动；GG 线标注距离、高度要求的注释反而上升（研究角色 8% → 19% → 33%），一部分来自 Strive 的 Clean Hit 新加的高度要求。标注“延迟”的条目也没有减少（GG 研究角色 27% → 44% → 41%）。所以能确定的只是：**GG 线把“角色差异”这一类门槛系统性地削减了**；至于执行难度是否被判断取代，数据看不出来。
 
 这组计量的局限要说清楚：Dustloop 各页由不同编者维护，CP Extend 页几乎只有记法（平均每条 177 字符），BBCT 的部分页面是旧粉丝 wiki 的原样搬运；旧作注释少可能让旧作的限定被低估，Strive 模板默认填“Everyone”又可能让 Strive 的限定被低估。条目比例反映的是页面构成，不是实战中遇到限定的频率。
 
@@ -462,7 +466,7 @@ Xrd → Strive，按键缓冲从 3 帧增加到 5 帧，搓招的逐步时限几
 
 两条线的走向不同。GG 一线是先把执行门槛换成判断，再收窄判断的范围：AC+R 用 2 帧窗口把便宜的取消锁起来，Xrd 用黄 RC 把它变成随时可用的 25% 选项，Strive 2.00 再明文限制 RC 的用途，并用 Counter Blitz 取代“需要练习和知识”的 Wild Assault。BB 一线反而一路往上加：Burst 从和 Barrier 绑在一起的一次性赌注，变成会回复、要和 Overdrive、Active Flow 抢同一条槽的资源。BBTag 才第一次拿掉执行型的取消。
 
-需要强调，“难度从执行转向决策”**不能作为全文结论**。它在系统层有一处官方表态（Counter Blitz），在 Zato 的槽规则上有两次官方收紧作佐证；但 §6.1~§6.3 的数据显示，延迟、位置这类执行要求并没有减少，Strive Zato 的核心连段仍标 Hard，BBCF Rachel 的时机要求仍然很多。Zato 的资源账在 Strive 其实比 AC+R 简单（AC+R 有两套影子、Exhaustion 溢出槽和 FRC）；如果按“要记住的规则数”算，Strive 的决策负担并不更重，按“每个动作的代价”算才更重。
+“难度从执行转向决策”**不能作为全文结论**。它在系统层有一处官方表态（Counter Blitz），在 Zato 的槽规则上有两次官方收紧作佐证；但 §6.1~§6.3 的数据显示，延迟、位置这类执行要求并没有减少，Strive Zato 的核心连段仍标 Hard，BBCF Rachel 的时机要求仍然很多。Zato 的资源账在 Strive 其实比 AC+R 简单（AC+R 有两套影子、Exhaustion 溢出槽和 FRC）；如果按“要记住的规则数”算，Strive 的决策负担并不更重，按“每个动作的代价”算才更重。
 
 ### 6.5 汇总表：下限与上限
 
@@ -495,7 +499,7 @@ Xrd → Strive，按键缓冲从 3 帧增加到 5 帧，搓招的逐步时限几
 
 ### 7.2 两条线的不同结果
 
-GG 一线改了系统，角色限定也跟着收窄。Sol 的核心连段在 Strive 变短、去掉手动延迟、去掉角色名单；Strive 2.00 再用统一受创判定把“只对特定角色成立的连段”系统性地清掉。从游戏文件看，Strive 并没有加长帧顿，放宽来自 5 帧缓冲，以及把 Xrd 逐招不同的收招取消统一成 S、H 系的通用规则，而轻攻击确认和搓招时限保持原样。
+GG 一线改了系统，角色限定也跟着收窄。Sol 的核心连段在 Strive 变短、去掉手动延迟、去掉大部分角色限定；Strive 2.00 再用统一受创判定把“只对特定角色成立的连段”系统性地清掉。从游戏文件看，Strive 并没有加长帧顿，放宽来自 5 帧缓冲，以及把 Xrd 逐招不同的收招取消统一成 S、H 系的通用规则，而轻攻击确认和搓招时限保持原样。
 
 BB 正作保留了体型差异和角色限定，难度基本维持。Ragna 的核心连段在正作里没有变短，变化主要是最紧窗口放宽；真正的简化集中在 BBTag。BBTag 的 Rachel 依然被称为“hard by BBTag standards”，Ragna 的手动连段依然要求晚命中和合适的高度。
 
@@ -513,7 +517,7 @@ Strive 是最直接的例子：
 | 2026-09（2.03） | 收资源 | 放慢 Eddie 主动收回后的回复 |
 | 2026-09（公布） | 再降门槛 | 新手向的大型新功能开发中 |
 
-五年里，开发者在“让新手进场”和“让肯练的人得到回报”之间来回调整了好几次。这说明简单与深度之间的平衡不是做一次就完成的，而是要随着玩家群体和版本内容不断重新找。
+五年里，开发者在“让新手进场”和“让肯练的人得到回报”之间来回调整了好几次。玩家群体和版本内容一变，简单与深度之间的平衡点就要重新找。
 
 ### 7.4 结论的适用边界
 

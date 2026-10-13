@@ -17,20 +17,20 @@ Windows PowerShell 如限制 npm 脚本，可把命令中的 `npm` 换成 `npm.c
 
 ## 更新内容
 
-- 完整文章：编辑根目录的 `Valheim战斗系统拆解案.md`、`BF6_Gunplay_拆解案.md` 或 `ASW角色变迁拆解案.md`。根目录原稿是全文唯一的内容来源，不要编辑生成的 `docs/*/full.md`。修改原稿后重新启动预览或运行构建。
+- 完整文章：编辑根目录的 `Valheim战斗系统拆解案.md`、`BF6_Gunplay_拆解案.md` 或 `ASW角色变迁拆解案.md`。根目录的这些 Markdown 文件是全文唯一的内容来源，不要编辑生成的 `docs/*/full.md`。修改后重新启动预览或运行构建。
 - 导读：编辑 `docs/valheim/index.md`、`docs/bf6/index.md` 或 `docs/asw/index.md`。
 - 研究资料：`research/` 只保存在本地（已加入 `.gitignore`），不随网站发布。
-- BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与原稿中的相对路径对应。构建时自动复制到全文与下载目录。
+- BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与文章中的相对路径对应。构建时自动复制到全文与下载目录。
 - 个人介绍和联系方式：编辑 `docs/about.md`。
 - 首页：编辑 `docs/.vitepress/theme/HomePage.vue`。
 - 网站名称、导航和部署子路径：编辑 `docs/.vitepress/config.mts`。
 - 页面风格：编辑 `docs/.vitepress/theme/style.css`。
 
-构建时会按 `scripts/articles.mjs` 中的文章列表复制原稿，加入不改变标题文字的章节锚点，并生成 Markdown 下载文件。根目录原稿不会被改写。版本号与分析数据来自原稿，网站构建不负责核实游戏事实。
+构建时会按 `scripts/articles.mjs` 中的文章列表复制根目录的 Markdown 文件，加入不改变标题文字的章节锚点，并生成 Markdown 下载文件。根目录文件本身不会被改写。版本号与分析数据以文章为准，网站构建不负责核实游戏事实。
 
-BF6 原稿下载保持原文不变。离线查看配图时，还需从仓库下载同级的 `BF6_Gunplay_拆解案_assets/` 文件夹；网站的 `downloads/` 下也保留了这些相对图片路径。
+BF6 的下载文件与根目录 Markdown 完全一致。离线查看配图时，还需从仓库下载同级的 `BF6_Gunplay_拆解案_assets/` 文件夹；网站的 `downloads/` 下也保留了这些相对图片路径。
 
-以后增加文章，可以在 `docs/` 下新建文件夹并加入 `index.md`，在首页和导航添加入口。图片建议放在文章同目录的 `images/` 文件夹，使用 `![说明](./images/文件名.png)` 引用。Valheim 原稿添加图片时，使用 `docs/public/images/valheim/` 存图、`![说明](/images/valheim/文件名.png)` 引用，保证生成后的文章可正确引用图片。
+以后增加文章，可以在 `docs/` 下新建文件夹并加入 `index.md`，在首页和导航添加入口。图片建议放在文章同目录的 `images/` 文件夹，使用 `![说明](./images/文件名.png)` 引用。Valheim 文章添加图片时，使用 `docs/public/images/valheim/` 存图、`![说明](/images/valheim/文件名.png)` 引用，保证生成后的文章可正确引用图片。
 
 ## 构建检查
 
@@ -40,7 +40,7 @@ npm run check
 npm run docs:preview
 ```
 
-检查会验证生成页面、站内链接、章节锚点、资源路径及下载原稿完整性。正式上传前建议用手机宽度浏览表格和导航。
+检查会验证生成页面、站内链接、章节锚点、资源路径及 Markdown 下载文件的完整性。正式上传前建议用手机宽度浏览表格和导航。
 
 当前使用 VitePress 1.6.4，并在 `overrides` 中固定 Vite 6.4.4，以避开其默认 Vite 5 依赖中的已知开发服务器漏洞。升级 VitePress 时可重新评估并移除此覆盖配置。
 
