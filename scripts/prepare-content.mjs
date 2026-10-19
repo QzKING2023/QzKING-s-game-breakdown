@@ -1,13 +1,18 @@
 import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises'
 import { articles } from './articles.mjs'
 
+const partNumbers = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 }
+
 // The root Markdown file remains the only source of truth for the full article.
 for (const entry of articles) {
   const source = new URL(`../${entry.source}`, import.meta.url)
   const original = await readFile(source, 'utf8')
   let article = original.replace(/^## (\d+)\. (.+)$/gm, '## $1. $2 {#section-$1}')
     .replace(/^### (\d+)\.(\d+) (.+)$/gm, '### $1.$2 $3 {#section-$1-$2}')
-    .replace(/^## 附录 ([A-D])：(.+)$/gm, '## 附录 $1：$2 {#appendix-$1}')
+    .replace(/^### (\d+)\. (.+)$/gm, '### $1. $2 {#section-$1}')
+    .replace(/^## 第([一二三四五六七八九])部 (.+)$/gm, (_, n, rest) => `## 第${n}部 ${rest} {#part-${partNumbers[n]}}`)
+    .replace(/^## 结语$/gm, '## 结语 {#conclusion}')
+    .replace(/^## 附录 ([A-D])([：\s])(.+)$/gm, '## 附录 $1$2$3 {#appendix-$1}')
   await mkdir(new URL(`../docs/${entry.slug}/`, import.meta.url), { recursive: true })
   await mkdir(new URL('../docs/public/downloads/', import.meta.url), { recursive: true })
   if (entry.assetDirectory) {

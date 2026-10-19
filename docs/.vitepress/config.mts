@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'QzKING · 游戏拆解',
-  description: 'QzKING2023 的游戏拆解与观察。从游玩体验出发，理解战斗中的规则、选择与反馈。',
+  description: 'QzKING2023 的游戏拆解与观察。从游玩体验出发，理解游戏里的规则、选择与反馈，以及这些规则怎样演变。',
   base: '/QzKING-s-game-breakdown/',
   cleanUrls: false,
   srcExclude: ['public/**'],
@@ -12,9 +12,16 @@ export default defineConfig({
     siteTitle: 'QzKING / 游戏拆解',
     nav: [
       { text: '首页', link: '/', activeMatch: '^/$' },
-      { text: 'ASW 角色变迁', link: '/asw/', activeMatch: '^/asw/' },
-      { text: 'BF6 枪械拆解', link: '/bf6/', activeMatch: '^/bf6/' },
-      { text: 'Valheim 拆解', link: '/valheim/', activeMatch: '^/valheim/' },
+      {
+        text: '文章',
+        activeMatch: '^/(turn-based|asw|bf6|valheim)/',
+        items: [
+          { text: '回合制的进化史', link: '/turn-based/', activeMatch: '^/turn-based/' },
+          { text: 'ASW 角色变迁', link: '/asw/', activeMatch: '^/asw/' },
+          { text: 'BF6 枪械拆解', link: '/bf6/', activeMatch: '^/bf6/' },
+          { text: 'Valheim 拆解', link: '/valheim/', activeMatch: '^/valheim/' }
+        ]
+      },
       { text: '关于我', link: '/about', activeMatch: '^/about' }
     ],
     sidebar: false,

@@ -1,6 +1,16 @@
 // Root Markdown files and their assets are the only sources for full articles.
 export const articles = [
   {
+    slug: 'turn-based',
+    source: '回合制的进化史.md',
+    download: 'turn-based-evolution.md',
+    title: '回合制的进化史 · 全文',
+    description: '从普鲁士兵棋讲到 2026 年，沿时间看回合制怎样把顺序、次数与概率交给玩家，再看女神异闻录、轨迹、幽浮三个系列和独立游戏的做法。',
+    sections: 17,
+    firstSection: 1,
+    appendices: ['A', 'B', 'C']
+  },
+  {
     slug: 'asw',
     source: 'ASW角色变迁拆解案.md',
     download: 'asw-character-evolution.md',

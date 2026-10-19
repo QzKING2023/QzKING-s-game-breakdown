@@ -1,9 +1,7 @@
 node_modules/
 docs/.vitepress/cache/
 docs/.vitepress/dist/
-docs/valheim/full.md
-docs/bf6/full.md
-docs/asw/full.md
+docs/*/full.md
 research/
 docs/bf6/BF6_Gunplay_拆解案_assets/
 docs/public/downloads/

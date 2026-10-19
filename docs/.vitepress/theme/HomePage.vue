@@ -8,7 +8,7 @@ import { withBase } from 'vitepress'
       <div class="intro-copy">
         <p class="eyebrow">QzKING2023 · 游戏拆解与观察</p>
         <h1 id="intro-title">玩过之后，<br>再看一层。</h1>
-        <p class="intro-description">记录游戏里的规则、选择与反馈。<br>从一次战斗的体验，追问系统如何运转。</p>
+        <p class="intro-description">记录游戏里的规则、选择与反馈。<br>从一次战斗的体验，追问系统如何运转，<br>也追问这些规则是怎样一路变过来的。</p>
         <a class="text-link" :href="withBase('/about.html')">关于这个小站 <span aria-hidden="true">↗</span></a>
       </div>
       <div class="field-notes" aria-label="拆解思路：从体验到规则，再到选择与反馈">
@@ -16,6 +16,24 @@ import { withBase } from 'vitepress'
         <p class="notes-question">一次战斗，<br>有哪些看不见的规则？</p>
         <div class="mechanism"><span>体验</span><i aria-hidden="true">→</i><span>规则</span><i aria-hidden="true">→</i><span>选择</span></div>
         <div class="notes-bottom"><span>命中 · 防御 · 资源 · 风险</span><span aria-hidden="true">＋</span></div>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="turn-based-title">
+      <div class="section-heading"><p class="eyebrow">专题研究 / ESSAY</p><span>04 / 回合制</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-turn" aria-label="回合制的进化史的文字封面">
+          <span class="cover-label">设计史研究</span>
+          <div><span class="cover-small">1824 / 2026</span><p class="cover-title">TURN<br>BASED</p><p class="cover-subtitle">顺序、次数，与概率的边界。</p></div>
+          <div class="cover-footer"><span>兵棋 / 日式 RPG / 战术 / 独立游戏</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>回合制</span><span>设计史</span><span>跨作比较</span></div>
+          <h2 id="turn-based-title">世界停下来等你，<br>这条规则变了多少？</h2>
+          <p>从 1824 年的普鲁士兵棋讲到 2026 年，看回合制怎样把顺序、次数与概率一步步交给玩家，又怎样把它们收回来。</p>
+          <p class="work-method">以开发者访谈、官方手册和规则书为主，沿时间看女神异闻录、轨迹、幽浮三个系列，再从独立游戏看规则被推到极端的样子。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/turn-based/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/turn-based/full.html')">直接阅读全文</a></div>
+        </div>
       </div>
     </section>
 
@@ -74,7 +92,10 @@ import { withBase } from 'vitepress'
     </section>
 
     <section class="questions" aria-labelledby="questions-title">
-      <div class="section-heading"><h2 id="questions-title">这些拆解在追问什么</h2><span>选择一个问题，进入正文</span></div>
+      <div class="section-heading"><h2 id="questions-title">这些文章在追问什么</h2><span>选择一个问题，进入正文</span></div>
+      <a :href="withBase('/turn-based/full.html#section-2')" class="question-row"><span class="question-number">回合制</span><div><h3>回合制是被硬件逼出来的吗？</h3><p>从普鲁士兵棋、D&amp;D 到《巫术》，看回合的粒度怎样被选出来。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/turn-based/full.html#section-9')" class="question-row"><span class="question-number">回合制</span><div><h3>空之轨迹的方格，后来变成了什么？</h3><p>从按格计算的范围到回合内自由走位，看轨迹怎样一步步放开移动。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/turn-based/full.html#section-10')" class="question-row"><span class="question-number">回合制</span><div><h3>显示 100% 的射击，为什么还会打空？</h3><p>从 1994 年的弹道到《幽浮 2》的隐藏补偿，看命中率怎样被摊开，又怎样被修饰。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/asw/full.html#section-6-1')" class="question-row"><span class="question-number">ASW</span><div><h3>主角的核心连段，到底简单了多少？</h3><p>按衔接类型拆开 Sol 与 Ragna 历代的 Core BnB。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/asw/full.html#section-6-2')" class="question-row"><span class="question-number">ASW</span><div><h3>Strive 的手感变宽松，来自帧顿还是规则？</h3><p>从游戏脚本读出帧顿、输入缓冲与取消窗口。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/bf6/full.html#section-3')" class="question-row"><span class="question-number">BF6</span><div><h3>后坐力有多少能练，又有多少只能碰运气？</h3><p>从准星轨迹区分平均上抬与每发随机方向。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
