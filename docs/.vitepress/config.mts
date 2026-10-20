@@ -14,8 +14,9 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '^/$' },
       {
         text: '文章',
-        activeMatch: '^/(turn-based|asw|bf6|valheim)/',
+        activeMatch: '^/(shooting|turn-based|asw|bf6|valheim)/',
         items: [
+          { text: '射击的进化史', link: '/shooting/', activeMatch: '^/shooting/' },
           { text: '回合制的进化史', link: '/turn-based/', activeMatch: '^/turn-based/' },
           { text: 'ASW 角色变迁', link: '/asw/', activeMatch: '^/asw/' },
           { text: 'BF6 枪械拆解', link: '/bf6/', activeMatch: '^/bf6/' },

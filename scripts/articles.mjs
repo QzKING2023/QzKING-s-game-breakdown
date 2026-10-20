@@ -1,6 +1,16 @@
 // Root Markdown files and their assets are the only sources for full articles.
 export const articles = [
   {
+    slug: 'shooting',
+    source: '射击的进化史.md',
+    download: 'shooting-evolution.md',
+    title: '射击的进化史 · 全文',
+    description: '从太空侵略者讲到战地风云 6，沿命中与随机、容错与记账两条线，看一次交火的结果怎样一步步被交给玩家或系统。',
+    sections: 11,
+    firstSection: 1,
+    appendices: ['A', 'B', 'C']
+  },
+  {
     slug: 'turn-based',
     source: '回合制的进化史.md',
     download: 'turn-based-evolution.md',

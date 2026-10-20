@@ -17,7 +17,7 @@ Windows PowerShell 如限制 npm 脚本，可把命令中的 `npm` 换成 `npm.c
 
 ## 更新内容
 
-- 完整文章：编辑根目录对应的 Markdown 文件，例如 `回合制的进化史.md`、`ASW角色变迁拆解案.md`、`BF6_Gunplay_拆解案.md`、`Valheim战斗系统拆解案.md`。文章与源文件的对应关系见 `scripts/articles.mjs`。根目录的这些 Markdown 文件是全文唯一的内容来源，不要编辑生成的 `docs/*/full.md`。修改后重新启动预览或运行构建。
+- 完整文章：编辑根目录对应的 Markdown 文件，例如 `射击的进化史.md`、`回合制的进化史.md`、`ASW角色变迁拆解案.md`、`BF6_Gunplay_拆解案.md`、`Valheim战斗系统拆解案.md`。文章与源文件的对应关系见 `scripts/articles.mjs`。根目录的这些 Markdown 文件是全文唯一的内容来源，不要编辑生成的 `docs/*/full.md`。修改后重新启动预览或运行构建。
 - 导读：编辑 `docs/<slug>/index.md`，例如 `docs/turn-based/index.md`、`docs/asw/index.md`。
 - 研究资料：`research/` 只保存在本地（已加入 `.gitignore`），不随网站发布。
 - BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与文章中的相对路径对应。构建时自动复制到全文与下载目录。

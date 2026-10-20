@@ -19,6 +19,24 @@ import { withBase } from 'vitepress'
       </div>
     </section>
 
+    <section class="featured" aria-labelledby="shooting-title">
+      <div class="section-heading"><p class="eyebrow">专题研究 / ESSAY</p><span>05 / 射击</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-shoot" aria-label="射击的进化史的文字封面">
+          <span class="cover-label">设计史研究</span>
+          <div><span class="cover-small">1978 / 2025</span><p class="cover-title">SHOOTER<br>HISTORY</p><p class="cover-subtitle">命中、随机，与容错的边界。</p></div>
+          <div class="cover-footer"><span>街机 / FPS / 掩体射击 / 英雄射击</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>射击游戏</span><span>设计史</span><span>源码取证</span></div>
+          <h2 id="shooting-title">扣下扳机之前，<br>结果定了多少？</h2>
+          <p>从《太空侵略者》讲到《战地风云 6》，看射击游戏怎样安排随机、后坐力和血量，一次交火的结果又怎样在玩家和系统之间来回划分。</p>
+          <p class="work-method">早期作品直接读公开源码，现代作品以官方文件、开发者访谈和本站取证为据，另沿掩体射击与英雄射击两条副线展开。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/shooting/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/shooting/full.html')">直接阅读全文</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="featured" aria-labelledby="turn-based-title">
       <div class="section-heading"><p class="eyebrow">专题研究 / ESSAY</p><span>04 / 回合制</span></div>
       <div class="work-layout">
@@ -93,6 +111,9 @@ import { withBase } from 'vitepress'
 
     <section class="questions" aria-labelledby="questions-title">
       <div class="section-heading"><h2 id="questions-title">这些文章在追问什么</h2><span>选择一个问题，进入正文</span></div>
+      <a :href="withBase('/shooting/full.html#section-3')" class="question-row"><span class="question-number">射击</span><div><h3>射击游戏是越做越拟真吗？</h3><p>从《德军总部 3D》的距离概率到《毁灭战士》的方向扩散，看随机最早的两种来源。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/shooting/full.html#section-5')" class="question-row"><span class="question-number">射击</span><div><h3>弹道背得下来，准星为什么还靠不住？</h3><p>从 CS 1.6 的半确定后坐力到 CS:GO 只跟 45% 的视角。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/shooting/full.html#section-7')" class="question-row"><span class="question-number">射击</span><div><h3>自动回血是从光环开始的吗？</h3><p>从护盾到“无血量”射击，看战斗的账怎样从整关缩到单场交火。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/turn-based/full.html#section-2')" class="question-row"><span class="question-number">回合制</span><div><h3>回合制是被硬件逼出来的吗？</h3><p>从普鲁士兵棋、D&amp;D 到《巫术》，看回合的粒度怎样被选出来。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/turn-based/full.html#section-9')" class="question-row"><span class="question-number">回合制</span><div><h3>空之轨迹的方格，后来变成了什么？</h3><p>从按格计算的范围到回合内自由走位，看轨迹怎样一步步放开移动。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/turn-based/full.html#section-10')" class="question-row"><span class="question-number">回合制</span><div><h3>显示 100% 的射击，为什么还会打空？</h3><p>从 1994 年的弹道到《幽浮 2》的隐藏补偿，看命中率怎样被摊开，又怎样被修饰。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
