@@ -8,6 +8,7 @@ for (const entry of articles) {
   const source = new URL(`../${entry.source}`, import.meta.url)
   const original = await readFile(source, 'utf8')
   let article = original.replace(/^## (\d+)\. (.+)$/gm, '## $1. $2 {#section-$1}')
+    .replace(/^### (\d+)\.(\d+)\.(\d+) (.+)$/gm, '### $1.$2.$3 $4 {#section-$1-$2-$3}')
     .replace(/^### (\d+)\.(\d+) (.+)$/gm, '### $1.$2 $3 {#section-$1-$2}')
     .replace(/^### (\d+)\. (.+)$/gm, '### $1. $2 {#section-$1}')
     .replace(/^## 第([一二三四五六七八九])部 (.+)$/gm, (_, n, rest) => `## 第${n}部 ${rest} {#part-${partNumbers[n]}}`)
@@ -35,9 +36,14 @@ outline: [2, 3]
 pageClass: full-article
 ---
 
-[← 返回导读](./) · <DownloadSource href="/downloads/${entry.download}" filename="${entry.source}" />
+[← 返回导读](./) · [拆解方法](../methods.md) · <DownloadSource href="/downloads/${entry.download}" filename="${entry.source}" />
 
-${article}`)
+${article}
+
+---
+
+本文用到的拆解方法，整理在本站的[拆解方法](../methods.md)页。
+`)
   await writeFile(new URL(`../docs/public/downloads/${entry.download}`, import.meta.url), original)
   console.log(`已从源文件生成 ${entry.slug} 全文页面及下载文件。`)
 }

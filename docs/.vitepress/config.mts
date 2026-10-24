@@ -14,8 +14,12 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '^/$' },
       {
         text: '文章',
-        activeMatch: '^/(shooting|turn-based|asw|bf6|valheim)/',
+        activeMatch: '^/(doom|bbcf-ragna|shooting|turn-based|asw|bf6|valheim|valheim-boss|valheim-defence)/',
         items: [
+          { text: 'DOOM 怪物状态机', link: '/doom/', activeMatch: '^/doom/' },
+          { text: 'Valheim 防御改造', link: '/valheim-defence/', activeMatch: '^/valheim-defence/' },
+          { text: 'Valheim BOSS 拆解', link: '/valheim-boss/', activeMatch: '^/valheim-boss/' },
+          { text: 'BBCF 拉格纳拆解案', link: '/bbcf-ragna/', activeMatch: '^/bbcf-ragna/' },
           { text: '射击的进化史', link: '/shooting/', activeMatch: '^/shooting/' },
           { text: '回合制的进化史', link: '/turn-based/', activeMatch: '^/turn-based/' },
           { text: 'ASW 角色变迁', link: '/asw/', activeMatch: '^/asw/' },
@@ -23,6 +27,7 @@ export default defineConfig({
           { text: 'Valheim 拆解', link: '/valheim/', activeMatch: '^/valheim/' }
         ]
       },
+      { text: '拆解方法', link: '/methods', activeMatch: '^/methods' },
       { text: '关于我', link: '/about', activeMatch: '^/about' }
     ],
     sidebar: false,

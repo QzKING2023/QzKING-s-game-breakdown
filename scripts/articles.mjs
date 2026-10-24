@@ -1,6 +1,24 @@
 // Root Markdown files and their assets are the only sources for full articles.
 export const articles = [
   {
+    slug: 'doom',
+    source: 'DOOM怪物状态机拆解案.md',
+    download: 'doom-monster-state-machine.md',
+    title: 'DOOM 怪物状态机拆解案 · 全文',
+    description: '读公开源码的状态表与固定随机表，拆解 DOOM 的怪物如何用同一张表同时做出「压得住」与「打不过」。',
+    sections: 9,
+    appendices: ['A', 'B']
+  },
+  {
+    slug: 'bbcf-ragna',
+    source: 'BBCF_Ragna拆解案.md',
+    download: 'bbcf-ragna.md',
+    title: 'BBCF 角色拆解案：拉格纳 · 全文',
+    description: '以帧数、取消规则与全角色横向对比，拆解 Arc 为什么把拉格纳设计成「好上手但不顶尖」的基础角色。',
+    sections: 8,
+    appendices: ['A', 'B']
+  },
+  {
     slug: 'shooting',
     source: '射击的进化史.md',
     download: 'shooting-evolution.md',
@@ -35,6 +53,24 @@ export const articles = [
     download: 'valheim-combat.md',
     title: 'Valheim 战斗系统拆解案 · 全文',
     description: '从伤害结算、区域遭遇与资源成本，分析 Valheim 战斗系统中的风险与收益。'
+  },
+  {
+    slug: 'valheim-boss',
+    source: 'Valheim_BOSS拆解案.md',
+    download: 'valheim-boss.md',
+    title: 'Valheim BOSS 拆解案 · 全文',
+    description: '拆解 Valheim 八个 BOSS 如何共用一套野外 AI 制造难度，并把第六关的蛊虫之后改造一遍、用遭遇战模拟验证改动前后。',
+    sections: 9,
+    appendices: ['A', 'B', 'C']
+  },
+  {
+    slug: 'valheim-defence',
+    source: 'Valheim_近战防御管线改造.md',
+    download: 'valheim-defence.md',
+    title: 'Valheim 近战防御管线改造 · 全文',
+    description: '只改近战防御公式（护甲、格挡、架势），能不能拆掉困难难度的死亡断崖？用同一台遭遇战模拟器跑出改动前后。',
+    sections: 11,
+    appendices: ['A', 'B', 'C']
   },
   {
     slug: 'bf6',

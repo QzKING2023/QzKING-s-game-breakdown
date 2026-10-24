@@ -3,6 +3,7 @@ docs/.vitepress/cache/
 docs/.vitepress/dist/
 docs/*/full.md
 research/
+AGENTS.md
 docs/bf6/BF6_Gunplay_拆解案_assets/
 docs/public/downloads/
 .local/

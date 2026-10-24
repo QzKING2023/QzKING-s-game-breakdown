@@ -19,9 +19,10 @@ Windows PowerShell 如限制 npm 脚本，可把命令中的 `npm` 换成 `npm.c
 
 - 完整文章：编辑根目录对应的 Markdown 文件，例如 `射击的进化史.md`、`回合制的进化史.md`、`ASW角色变迁拆解案.md`、`BF6_Gunplay_拆解案.md`、`Valheim战斗系统拆解案.md`。文章与源文件的对应关系见 `scripts/articles.mjs`。根目录的这些 Markdown 文件是全文唯一的内容来源，不要编辑生成的 `docs/*/full.md`。修改后重新启动预览或运行构建。
 - 导读：编辑 `docs/<slug>/index.md`，例如 `docs/turn-based/index.md`、`docs/asw/index.md`。
-- 研究资料：`research/` 只保存在本地（已加入 `.gitignore`），不随网站发布。
+- 研究资料：`research/` 是单独的私密仓库（已加入本仓库的 `.gitignore`），不随网站发布。写作标准、研究计划和本地工作约定（`AGENTS.md`）也保存在那里。
 - BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与文章中的相对路径对应。构建时自动复制到全文与下载目录。
 - 个人介绍和联系方式：编辑 `docs/about.md`。
+- 拆解方法页：编辑 `docs/methods.md`。每篇全文页的开头和结尾会自动加上指向它的链接（见 `scripts/prepare-content.mjs`）。
 - 首页：编辑 `docs/.vitepress/theme/HomePage.vue`。
 - 网站名称、导航和部署子路径：编辑 `docs/.vitepress/config.mts`。
 - 页面风格：编辑 `docs/.vitepress/theme/style.css`。
@@ -37,7 +38,7 @@ BF6 的下载文件与根目录 Markdown 完全一致。离线查看配图时，
 3. 在 `docs/<slug>/` 下新建导读 `index.md`。
 4. 在 `docs/.vitepress/config.mts` 导航栏的“文章”下拉菜单和首页 `HomePage.vue` 中添加入口，并在 `docs/about.md` 的文章列表中补上一行。
 
-构建时会自动为以下标题加锚点：`## 1. …`（`#section-1`）、`### 1.2 …`（`#section-1-2`）、`### 1. …`（`#section-1`）、`## 第一部 …`（`#part-1`）、`## 结语`（`#conclusion`）、`## 附录 A：…` 或 `## 附录 A …`（`#appendix-A`）。
+构建时会自动为以下标题加锚点：`## 1. …`（`#section-1`）、`### 1.2 …`（`#section-1-2`）、`### 1.2.3 …`（`#section-1-2-3`）、`### 1. …`（`#section-1`）、`## 第一部 …`（`#part-1`）、`## 结语`（`#conclusion`）、`## 附录 A：…` 或 `## 附录 A …`（`#appendix-A`）。
 
 图片建议放在文章同目录的 `images/` 文件夹，使用 `![说明](./images/文件名.png)` 引用。Valheim 文章添加图片时，使用 `docs/public/images/valheim/` 存图、`![说明](/images/valheim/文件名.png)` 引用，保证生成后的文章可正确引用图片。
 

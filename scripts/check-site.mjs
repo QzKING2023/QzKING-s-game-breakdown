@@ -16,7 +16,7 @@ async function read(file) {
   if (!cache.has(file)) cache.set(file, await readFile(file, 'utf8'))
   return cache.get(file)
 }
-for (const required of ['index.html', 'about.html', ...articles.flatMap(({ slug }) => [`${slug}/index.html`, `${slug}/full.html`])]) {
+for (const required of ['index.html', 'about.html', 'methods.html', ...articles.flatMap(({ slug }) => [`${slug}/index.html`, `${slug}/full.html`])]) {
   assert.ok(pages.includes(path.join(root, required)), `缺少页面：${required}`)
 }
 let count = 0
@@ -49,6 +49,7 @@ for (const entry of articles) {
   for (let i = firstSection; i < firstSection + (entry.sections ?? 15); i++) assert.ok(article.includes(`id="section-${i}"`), `缺少第 ${i} 节`)
   for (const appendix of entry.appendices ?? ['A', 'B', 'C', 'D']) assert.ok(article.includes(`id="appendix-${appendix}"`), `缺少附录 ${appendix}`)
   assert.ok(article.includes('role="region"') && article.includes('tabindex="0"'), '表格应支持键盘横向滚动')
+  assert.ok(article.includes('methods.html'), `${entry.slug} 全文页应链接拆解方法页`)
   for (const [name, alt] of Object.entries(entry.images ?? {})) {
     assert.ok(article.includes(`alt="${alt}"`), `缺少图表说明：${name}`)
     const sourceImage = await readFile(new URL(`../${entry.assetDirectory}/${name}`, import.meta.url))
