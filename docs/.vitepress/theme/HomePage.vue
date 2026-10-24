@@ -22,6 +22,78 @@ import { withBase } from 'vitepress'
       </div>
     </section>
 
+    <section class="featured" aria-labelledby="sts-title">
+      <div class="section-heading"><p class="eyebrow">系列总纲 / SERIES</p><span>13 / 杀戮尖塔</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-sts" aria-label="《杀戮尖塔》两代设计方向的文字封面">
+          <span class="cover-label">系列总纲</span>
+          <div><span class="cover-small">杀戮尖塔 · 一代 / 二代</span><p class="cover-title">SLAY THE<br>SPIRE</p><p class="cover-subtitle">两代方向，与限制的代价。</p></div>
+          <div class="cover-footer"><span>构筑取得 / 战斗使用 / 跨案判决</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>卡牌构筑</span><span>两代对照</span><span>跨案判决</span></div>
+          <h2 id="sts-title">限制循环的两处改动，<br>是同向的吗？</h2>
+          <p>二代在「构筑取得」和「战斗使用」两个环节限制循环：角色的运转工具更难取得，BOSS 要求已经搭起的引擎承担出牌次数、能量或污染成本。总纲把两篇个案并排，给出跨案判决。</p>
+          <p class="work-method">沿两篇个案的代码与文件核查、受控计算和官方补丁记录，用同一组指标对照限制发生在哪一阶段。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/sts/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/sts/full.html')">直接阅读全文</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="sts-silent-title">
+      <div class="section-heading"><p class="eyebrow">拆解案 / CASE STUDY</p><span>12 / 角色拆解</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-sts-silent" aria-label="静默猎手两代拆解的文字封面">
+          <span class="cover-label">角色拆解</span>
+          <div><span class="cover-small">杀戮尖塔 · 静默猎手</span><p class="cover-title">THE<br>SILENT</p><p class="cover-subtitle">取得、启动，与持续收益。</p></div>
+          <div class="cover-footer"><span>杂技升蓝 / 删牌涨价 / 毒防</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>卡牌构筑</span><span>两代对照</span><span>构筑经济</span></div>
+          <h2 id="sts-silent-title">二代改的是「牌」，<br>还是拿到牌的过程？</h2>
+          <p>杂技升蓝之后，同一张牌抽弃的手牌数没变，奖励池位置变了。文章从取得、启动、兑现到受干扰后还能做什么，逐层对照两代规则，解释低费持续收益为什么更有吸引力。</p>
+          <p class="work-method">读两代本地化文本并核对实现、对照官方补丁，再按现有规则枚举奖励与手牌，做资源账和局部战斗账。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/sts-silent/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/sts-silent/full.html')">直接阅读全文</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="sts-boss-title">
+      <div class="section-heading"><p class="eyebrow">拆解案 / CASE STUDY</p><span>11 / 敌人设计</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-sts-boss" aria-label="反无限 BOSS 拆解案的文字封面">
+          <span class="cover-label">敌人设计</span>
+          <div><span class="cover-small">杀戮尖塔 · 反无限 BOSS</span><p class="cover-title">ANTI-<br>INFINITE</p><p class="cover-subtitle">预算、三阶段，与污染。</p></div>
+          <div class="cover-footer"><span>时间吞噬者 / 门扉缔造者 / 永世沙漏</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>卡牌构筑</span><span>敌人设计</span><span>机制对比</span></div>
+          <h2 id="sts-boss-title">限制循环之后，<br>还给玩家留下什么？</h2>
+          <p>三个 BOSS 都干涉连续出牌，但交给玩家的问题差别很大：一个把出牌次数变成公开预算，一个轮流限制复用与资源，一个让连续出牌产生需要处理的污染。四项判据并排之后，评价并不一样。</p>
+          <p class="work-method">逐条核对三条结算链、做固定出牌数的精确计数反事实，再把规则放回完整 BOSS 战检查。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/sts-boss/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/sts-boss/full.html')">直接阅读全文</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="rachel-title">
+      <div class="section-heading"><p class="eyebrow">拆解案 / CASE STUDY</p><span>10 / 格斗游戏</span></div>
+      <div class="work-layout">
+        <div class="work-cover work-cover-rachel" aria-label="BBCF 角色拆解案：雷琪儿的文字封面">
+          <span class="cover-label">帧级角色拆解</span>
+          <div><span class="cover-small">苍翼默示录 神观之梦</span><p class="cover-title">RACHEL<br>ALUCARD</p><p class="cover-subtitle">风、设置，与接近的时机。</p></div>
+          <div class="cover-footer"><span>风槽 / 空间控制 / 起攻</span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="work-copy">
+          <div class="tags"><span>2D 格斗</span><span>资源管理</span><span>角色对比</span></div>
+          <h2 id="rachel-title">同样拥有设置，<br>雷琪儿的打法为何不同？</h2>
+          <p>风能同时改变雷琪儿与场上物体的运动。沿着牵制、接近、击倒与起攻，拆开这份协同的收益，再看有限的风槽怎样约束她的连续进攻与脱身。</p>
+          <p class="work-method">核对角色脚本、社区帧数与版本改动，并把奈茵、莉琪、μ-12 放进相同局面，比较设置物各自服务于什么打法。</p>
+          <div class="work-actions"><a class="primary-link" :href="withBase('/bbcf-rachel/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/bbcf-rachel/full.html')">直接阅读全文</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="featured" aria-labelledby="doom-title">
       <div class="section-heading"><p class="eyebrow">拆解案 / CASE STUDY</p><span>09 / 敌人设计</span></div>
       <div class="work-layout">
@@ -45,13 +117,13 @@ import { withBase } from 'vitepress'
       <div class="work-layout">
         <div class="work-cover work-cover-ragna" aria-label="BBCF 角色拆解案：拉格纳的文字封面">
           <span class="cover-label">帧级角色拆解</span>
-          <div><span class="cover-small">苍翼默示录 神观之梦</span><p class="cover-title">RAGNA<br>THE BLOODEDGE</p><p class="cover-subtitle">帧数、取消，与全角色横向对比。</p></div>
-          <div class="cover-footer"><span>5B 位 / 取消树 / 36 人横向表</span><span aria-hidden="true">↗</span></div>
+          <div><span class="cover-small">苍翼默示录 神观之梦</span><p class="cover-title">RAGNA<br>THE BLOODEDGE</p><p class="cover-subtitle">接触、压制，与吸血的回报。</p></div>
+          <div class="cover-footer"><span>中近距离技能 / 贴身压制 / 噬魂剑</span><span aria-hidden="true">↗</span></div>
         </div>
         <div class="work-copy">
           <div class="tags"><span>2D 格斗</span><span>帧级拆解</span><span>全角色对比</span></div>
-          <h2 id="ragna-title">一个「好上手」的主角，<br>上限卡在哪里？</h2>
-          <p>逐招拆开拉格纳的发生、持续、收招与命中 / 被防有利帧，再把同一个招式位放进全 36 名角色里并排：他的「好确认」来自取消树，而「不顶尖」指的不是哪一项差，是长板不够长。</p>
+          <h2 id="ragna-title">怎样取得接触，<br>又怎样把进攻维持下去？</h2>
+          <p>拉格纳以优秀的中近距离技能取得接触，在贴身压制中争取命中，把连段转化为伤害、吸血和下一次进攻。逐招检查他的距离、取消与收招风险，看这套打法在哪些条件下成立。</p>
           <p class="work-method">反汇编角色脚本、逐帧解析判定框、与社区帧数表交叉核对，再用帧数加减法做确反、压制空隙与目押窗口的反事实。</p>
           <div class="work-actions"><a class="primary-link" :href="withBase('/bbcf-ragna/')">阅读导读 <span aria-hidden="true">→</span></a><a class="text-link" :href="withBase('/bbcf-ragna/full.html')">直接阅读全文</a></div>
         </div>
@@ -186,10 +258,13 @@ import { withBase } from 'vitepress'
 
     <section class="questions" aria-labelledby="questions-title">
       <div class="section-heading"><h2 id="questions-title">这些文章在追问什么</h2><span>选择一个问题，进入正文</span></div>
+      <a :href="withBase('/sts/full.html#section-4')" class="question-row"><span class="question-number">杀戮尖塔</span><div><h3>二代的角色与 BOSS 改动，是同向的吗？</h3><p>两处限制分别落在构筑形成与战斗使用，普通运转也承担连带成本。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/sts-silent/full.html#section-3-1')" class="question-row"><span class="question-number">杀戮尖塔 · 猎手</span><div><h3>杂技升蓝，到底改了什么？</h3><p>同一张牌的手牌数没变；20 组普通奖励里一次都没出现的概率从 16.4% 变成 53.1%。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/sts-boss/full.html#section-7')" class="question-row"><span class="question-number">杀戮尖塔 · BOSS</span><div><h3>把沙漏的污染间隔从六张改成七张，会怎样？</h3><p>污染减少，高频出牌的收益同时被放宽——本篇唯一验证过的改动。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/doom/full.html#section-3')" class="question-row"><span class="question-number">DOOM</span><div><h3>「压得住」和「打不过」，为什么是同一个数？</h3><p>同一个 <code>painchance</code>，在杂兵身上让霰弹枪每发必断，在赛博恶魔身上只剩三成。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/doom/full.html#section-5-5')" class="question-row"><span class="question-number">DOOM</span><div><h3>杂兵为什么能被按住，赛博恶魔为什么按不住？</h3><p>把整场交火逐 tick 跑一遍：小恶魔 94～100% 零出手，赛博恶魔必然还手十几次。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
-      <a :href="withBase('/bbcf-ragna/full.html#section-3')" class="question-row"><span class="question-number">BBCF 拉格纳</span><div><h3>一个「好上手」的主角，上限卡在哪里？</h3><p>全招被防为负、中段不安全、没有远距离手段，斩杀线在上段之下。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
-      <a :href="withBase('/bbcf-ragna/full.html#section-3-8')" class="question-row"><span class="question-number">BBCF 拉格纳</span><div><h3>同一个招式位，36 个角色的取舍差在哪？</h3><p>把他的 5B 放进全角色里并排，才看得出「能复合的长板才算长板」。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/bbcf-ragna/full.html#section-3')" class="question-row"><span class="question-number">BBCF 拉格纳</span><div><h3>牵制被防后，对手何时能够还手？</h3><p>结合距离、取消和发生，检查拉格纳何时能继续压制，何时会被确反。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
+      <a :href="withBase('/bbcf-rachel/full.html#section-6')" class="question-row"><span class="question-number">BBCF 雷琪儿</span><div><h3>同样拥有设置，为什么打法不同？</h3><p>比较雷琪儿、奈茵、莉琪和 μ-12 怎样控制空间、取得接触并组织下一次进攻。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/valheim-defence/full.html#section-3')" class="question-row"><span class="question-number">Valheim 防御</span><div><h3>近战的断崖，是「血量」问题还是「架势」问题？</h3><p>把两个旋钮分别拉到底，靶向性差 4~8 倍。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/valheim-defence/full.html#section-6')" class="question-row"><span class="question-number">Valheim 防御</span><div><h3>改了防御公式，为什么断崖还在？</h3><p>剩下的死亡格里，玩家死时敌人还剩三成到九成血。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>
       <a :href="withBase('/valheim-boss/full.html#section-4')" class="question-row"><span class="question-number">Valheim BOSS</span><div><h3>八个 BOSS，难度到底靠什么调？</h3><p>它们共用一套野外 AI，差别只在血量、牌堆、血量门与可挡性。</p></div><span class="question-arrow" aria-hidden="true">↗</span></a>

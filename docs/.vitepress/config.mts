@@ -14,12 +14,16 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '^/$' },
       {
         text: '文章',
-        activeMatch: '^/(doom|bbcf-ragna|shooting|turn-based|asw|bf6|valheim|valheim-boss|valheim-defence)/',
+        activeMatch: '^/(sts|sts-silent|sts-boss|doom|bbcf-ragna|bbcf-rachel|shooting|turn-based|asw|bf6|valheim|valheim-boss|valheim-defence)/',
         items: [
+          { text: '《杀戮尖塔》总纲', link: '/sts/', activeMatch: '^/sts/' },
+          { text: '《杀戮尖塔》静默猎手', link: '/sts-silent/', activeMatch: '^/sts-silent/' },
+          { text: '《杀戮尖塔》反无限 BOSS', link: '/sts-boss/', activeMatch: '^/sts-boss/' },
           { text: 'DOOM 怪物状态机', link: '/doom/', activeMatch: '^/doom/' },
           { text: 'Valheim 防御改造', link: '/valheim-defence/', activeMatch: '^/valheim-defence/' },
           { text: 'Valheim BOSS 拆解', link: '/valheim-boss/', activeMatch: '^/valheim-boss/' },
           { text: 'BBCF 拉格纳拆解案', link: '/bbcf-ragna/', activeMatch: '^/bbcf-ragna/' },
+          { text: 'BBCF 雷琪儿拆解案', link: '/bbcf-rachel/', activeMatch: '^/bbcf-rachel/' },
           { text: '射击的进化史', link: '/shooting/', activeMatch: '^/shooting/' },
           { text: '回合制的进化史', link: '/turn-based/', activeMatch: '^/turn-based/' },
           { text: 'ASW 角色变迁', link: '/asw/', activeMatch: '^/asw/' },
