@@ -97,7 +97,7 @@ export const articles = [
     title: 'Valheim BOSS 拆解案 · 全文',
     description: '拆解 Valheim 八个 BOSS 如何共用一套野外 AI 制造难度，并把第六关的蛊虫之后改造一遍、用遭遇战模拟验证改动前后。',
     sections: 9,
-    appendices: ['A', 'B', 'C']
+    appendices: ['A', 'B', 'C', 'D']
   },
   {
     slug: 'valheim-defence',
@@ -106,7 +106,7 @@ export const articles = [
     title: 'Valheim 近战防御管线改造 · 全文',
     description: '只改近战防御公式（护甲、格挡、架势），能不能拆掉困难难度的死亡断崖？用同一台遭遇战模拟器跑出改动前后。',
     sections: 11,
-    appendices: ['A', 'B', 'C']
+    appendices: ['A', 'B', 'C', 'D']
   },
   {
     slug: 'bf6',

@@ -68,7 +68,7 @@ ASW 很适合用来观察这个问题。它的两个招牌系列 Guilty Gear（�
 
 原则上每代取最终版本，因为同一作的不同版本通常没有系统层面的改动。三个例外需要单独交代：
 
-1. **CS 世代缺数据**。BBCS 的帧数页是空页面，BBCS II 没有帧数表，BBCS Extend（下称 CSE）有帧数表但没有地面受创硬直，Rachel 的帧数页还标着“TODO: Correct frame data”。而 Dustloop 对 CSE 的描述是“多项角色平衡调整，并对 BlazBlue 引擎做了大幅修改”，所以也不能拿初版数据顶替。CS 世代在本文中只做定性描述。
+1. **CS 世代缺数据**。BBCS 的帧数页是空页面，BBCS II 没有帧数表，BBCS Extend（下称 CSE）有帧数表但没有地面受创硬直，Rachel 的帧数页还标着“TODO: Correct frame data”。而 Dustloop 对 CSE 的描述是“多项角色平衡调整，并对 BlazBlue 引擎做了大幅修改”，所以也不能拿初版数据顶替。CS 世代只做定性描述。
 2. **Xrd REVELATOR 加入了 Stylish**。它不影响 REV 2 的帧数数据，但在简易模式的时间线上是一个节点。
 3. **Strive Ver.2.00 是实打实的系统改动**：限制 Roman Cancel、移除 Wild Assault、加入 Counter Blitz、统一受创判定。原版与 2.00 的差异本身就是论据。
 
@@ -92,7 +92,7 @@ CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样
 
 每套连段另外记录六个帧数以外的维度：限定条件（反击、板边、角色、补正阈值）、确认难度、指令复杂度、资源消耗、失误代价，以及 Dustloop 编者给的难度标注。难度标注由各页编者主观填写，只能在同一作品内部参考。
 
-拆分的结果是：**4 个角色、各代主力连段的衔接几乎全是取消**，能按帧数表算出窗口的地面目押，全部样本里只有一处，而且它来自社区资料、按统一公式其实算不出来。难点集中在空中追打和延迟、位置依赖上，而 Xrd、Strive、BBCT 的帧数数据缺受身不能时间，连空中追打的上界都算不出。所以本文第 6 节的主要证据是衔接构成、连段长度、延迟数和限定条件；帧数窗口只在少数算得出的地方作佐证，并一律注明是上界。
+拆分的结果是：**4 个角色、各代主力连段的衔接几乎全是取消**，能按帧数表算出窗口的地面目押，全部样本里只有一处，而且它来自社区资料、按统一公式算不出来。难点集中在空中追打和延迟、位置依赖上，而 Xrd、Strive、BBCT 的帧数数据缺受身不能时间，连空中追打的上界都算不出。所以本文第 6 节的主要证据是衔接构成、连段长度、延迟数和限定条件；帧数窗口只在少数算得出的地方作佐证，并一律注明是上界。
 
 帧数表还漏掉了两项影响手感的因素：帧顿和输入缓冲。§6.2 从游戏文件中读出这两项，单独比较。
 
@@ -101,10 +101,8 @@ CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样
 ### 1.5 局限
 
 - 我对早期作品没有大量实机经验。执行层的结论依赖 Dustloop 数据，决策层的结论依赖社区共识与官方说明，文中都标明来源。
-- Dustloop 大多只收各作的最终版本，看不到代内变化；Strive 页面反映的是 2.00 之后的状态。
-- Dustloop 各页面由不同编者在不同年份维护，写法差别很大。注释多少不等于游戏里实际限定多少（详见 §6.3）。
-- 所有窗口计算只到上界，未扣受创递减、冲刺帧数和高度影响。
-- 游戏文件只有 Xrd REV 2、Strive、BBCF 三作；从中读出的是攻击等级和帧顿修正，帧顿对照表、持续与收招帧仍取自 Dustloop。
+- Dustloop 大多只收各作的最终版本，看不到代内变化；Strive 页面反映的是 2.00 之后的状态。游戏文件只有 Xrd REV 2、Strive、BBCF 三作，从中读出的是攻击等级和帧顿修正；帧顿对照表、持续与收招帧仍取自 Dustloop。
+- Dustloop 各页面由不同编者在不同年份维护，写法差别很大，注释多少不等于游戏里实际限定多少（详见 §6.3）。所有窗口计算只到上界，未扣受创递减、冲刺帧数和高度影响。
 
 ---
 
@@ -116,7 +114,7 @@ CP 世代以 Dustloop 上 CP Extend 的独立页面（代码 `BBCPE`）为主样
 
 初代 Sol 被社区归为“执行门槛友好”的波升型角色。而初代 Zato 还不是人偶型角色，影子不能独立行动，被认为是牵制型角色。
 
-GGX 确立了 Zato 的人偶角色原型：236X 召唤影子，影子靠**反向输入**（松开按键）出招，被打会被强制收回。Dustloop 把执行列为缺点：“Controlling the shadow effectively requires a strong grasp of both Negative Edge inputs and timing its attacks alongside Zato's”。GGX 的帧数表没有命中有利帧和受创硬直，Steam 上也买不到，本文不作数据比较。
+GGX 确立了 Zato 的人偶角色原型：236X 召唤影子，影子靠**反向输入**（松开按键）出招，被打会被强制收回。Dustloop 把执行列为缺点：“Controlling the shadow effectively requires a strong grasp of both Negative Edge inputs and timing its attacks alongside Zato's”。GGX 的帧数表没有命中有利帧和受创硬直，Steam 上也买不到，这一代只作定性比较。
 
 ### 2.2 GGXX AC+R：复杂度的高点
 
@@ -159,7 +157,7 @@ Sol 页面称 Gun Flame FRC“is one of Sol's best uses of meter”，窗口是 
 BBCT 发售时没有简易操作模式。Kotaku 在 2010 年评价 CT 家用版对新手很难，直到 CS 才加入 Beginner Mode。
 
 - **Ragna**：Dustloop 称他“大概是最容易上手的角色”，“combos are simple, low execution, and very damaging”。入门连段 `5B > 5C > 214A~214D` 标 Very Easy；Core 一节的第一条「5D > 6A Link」标 Easy，10 个招式输入，含一处冲刺取消后的目押（`5D dc 6A`），对 Carl、Arakune 板中无效。标志性的 Driveloop 需要反击起手、两处“maximum delay”，并且要“character to character depending on hurtbox size”地调整，标 Hard。
-- **Rachel**：风槽配合 5B、3C 快速打掉 Guard Libra，不花 Heat 就能破防；风推动 Pumpkin、George 等飞行道具构成板面上的牵制。Dustloop 没有 CT Rachel 的连段页，现有连段只来自 BlazBlue Fandom 的二手资料，本文只作结构参考。
+- **Rachel**：风槽配合 5B、3C 快速打掉 Guard Libra，不花 Heat 就能破防；风推动 Pumpkin、George 等飞行道具构成板面上的牵制。Dustloop 没有 CT Rachel 的连段页，现有连段只来自 BlazBlue Fandom 的二手资料，只作结构参考。
 
 CT 的帧数数据也有缺口：Rachel 的受创硬直、防御硬直、受身不能时间全空，Ragna 的也大多缺失。CT 基本不能参与窗口比较。
 
@@ -167,7 +165,7 @@ CT 的帧数数据也有缺口：Rachel 的受创硬直、防御硬直、受身�
 
 2010 年 BBCS 家用版首次加入 **Beginner Mode**：单键出必杀，连按出预设连段。CSE 改名为 **Stylish Mode**，竞技中不用。CSE 的 Stylish 还会禁用 Burst。
 
-系统层面，Burst 从 CT 的“和 Barrier 槽绑定、用后本回合一直处于 Danger 状态”改成图标计数（开局 1 个，每输一回合再得 1 个，整场最多 2 个）；Counter Assault 会让本回合最大 Guard Primer 永久 −1。防御系统的代价从“当下”拉长到“整个回合”。这些数据 Dustloop 注明来自 CS2，CSE 是否有改动无法确认。
+系统层面，Burst 从 CT 的“和 Barrier 槽绑定、用后本回合一直处于 Danger 状态”改成图标计数（开局 1 个，每输一回合再得 1 个，整场最多 2 个）；Counter Assault 会让本回合最大 Guard Primer 永久 −1。防御系统的代价从“当下”拉长到“整个回合”。这些数据 Dustloop 注明来自 CS2；CSE 是否有改动，现有资料没有说明。
 
 两位角色只能定性描述：
 
@@ -247,7 +245,7 @@ Strive 发售后，系统在不断扩充。Ver.1.29（2023）把 Burst 槽变成
 
 ### 4.5 尚未公开的新手功能
 
-2026-09-29 的 Developer's Backyard Vol.20 中，制作人宫内健宣布正在开发帮助新手和“觉得操作难”的玩家自由操控角色的大型新功能，预计年底公开实机；同时公布 Strive 全球玩家超过 400 万。本文写作时该功能尚未公开，这里只记录事实，不作预测。
+2026-09-29 的 Developer's Backyard Vol.20 中，制作人宫内健宣布正在开发帮助新手和“觉得操作难”的玩家自由操控角色的大型新功能，预计年底公开实机；同时公布 Strive 全球玩家超过 400 万。截至 2026-10-12，该功能尚未公开。
 
 ---
 
@@ -323,14 +321,14 @@ Ragna 的下降方式和 Sol 不同。正作的 Core BnB 没有变短，CSE 之�
 |---|---|---|---|
 | Zato | AC+R | Shadow Gallery 循环（“Big damage”，Medium） | 每轮 24% 影子槽，满槽约 4 轮；“Difficulty depends on the opponent's air hurtbox”，板边要对 8 名角色换做法 |
 | Zato | AC+R | Vice 板边三重中段 → 不可防（Medium） | FRC 窗口 3F；页面说 FRC“makes it consistent accross the cast and is easier than learning the character specific timing” |
-| Zato | Xrd REV 2 | Dustloop 页面是空壳，无法按标准定义 | 社区指南的带 Eddie 连段，要在“拿伤害”和“收回再召唤拿起身压制”之间按对手二选一 |
+| Zato | Xrd REV 2 | Dustloop 页面是空壳，没有可拆的连段 | 社区指南的带 Eddie 连段，要在“拿伤害”和“收回再召唤拿起身压制”之间按对手二选一 |
 | Zato | Strive | Oppose 对空核心连段（Hard） | C5 / D3，另有 2 处松键衔接（目押或延迟视情况）；两次 Leap 按字面就是整条 Eddie 槽 |
 | Rachel | CP 1.x | “go-to BnB path” | `214C 66 5CC` 上界 3~10F；风要在确认前就花 |
 | Rachel | CP Extend | 板边（不用风） / 板中（1 格风） | 上界 7~14F / 13~19F；D 各 3 处 |
 | Rachel | CF | 板中 Basic / 板边 Basic | `4B → 5CC` 上界 21~24F；D 4 / 5 处；起始风 2 / 1 格 |
 | Rachel | BBTag | Combo Theory 板中 / 板边 | Lobelia 后追打封顶 23F；D 4 / 2 处；风 2 / 1 格 |
 
-高难角色这一侧，很窄的固定帧窗口在减少：Zato 的 2~3F FRC 只出现在 AC+R，Rachel 最紧的上界从 CP 1.x 的 3F 一路放宽到 CF 的 21F。但延迟、高度、出风时机这类衔接并没有减少。BBCF Rachel 的连段页里，“立刻”“尽量晚”“尽量高”“贴地”这类说法的密度，在同作 6 个连段页中最高；最优收尾被称为“dropped frequently even at high level”，原因写的是“height/distance/character specific”。页面也说她的连段“actually not that difficult, but may be unintuitive to new players”。BBCF Rachel“仍然有很多窄窗口”的体感，有充分的文本支持；只是这种“窄”多是相对于对手高度、出风和落地的时机，而不是帧数表上的固定窗口，目前没法用帧数量化。
+高难角色这一侧，很窄的固定帧窗口在减少：Zato 的 2~3F FRC 只出现在 AC+R，Rachel 最紧的上界从 CP 1.x 的 3F 一路放宽到 CF 的 21F。但延迟、高度、出风时机这类衔接并没有减少。BBCF Rachel 的连段页里，“立刻”“尽量晚”“尽量高”“贴地”这类说法的密度，在同作 6 个连段页中最高；最优收尾被称为“dropped frequently even at high level”，原因写的是“height/distance/character specific”。页面也说她的连段“actually not that difficult, but may be unintuitive to new players”。BBCF Rachel“仍然有很多窄窗口”的体感，有充分的文本支持；这种“窄”主要来自对手高度、出风和落地的时机，不在帧数表的固定窗口里。
 
 ### 6.2 帧顿、输入缓冲与取消窗口
 
@@ -372,9 +370,9 @@ GG 三代的帧顿表完全相同，Strive 与 Xrd 的平均帧顿也几乎一�
 
 BBCF 的对应值：Ragna 5B 21、5C 17，Rachel 5B 16、6A 20。
 
-Strive 的 P、K 系给的是区间：小的值按 Dustloop 的“只能在持续帧取消”计算，大的值按脚本中 `recoveryState` 的位置计算（持续帧后 2~5 帧）。两者相差 2~5 帧，可能是 Dustloop 的写法较粗，也可能是 `recoveryState` 在 Strive 里的作用与 Xrd 不完全相同，所以这里保留区间。
+Strive 的 P、K 系给的是区间：小的值按 Dustloop 的“只能在持续帧取消”计算，大的值按脚本中 `recoveryState` 的位置计算（持续帧后 2~5 帧）。两种口径相差 2~5 帧，下面按区间记。
 
-所以 Xrd → Strive 的变化，与其说是“放宽”，不如说是“统一”。Xrd 已经允许不少招式在收招中取消，但每招长短不一，玩家要逐招记；Strive 改成“S、H 系整个收招都能取消”的通用规则，再加上持续帧变长（c.S 2 帧 → 6 帧），Sol c.S 从 24 帧变成 30 帧，Zato c.S 从 20 帧变成 29 帧。P、K 系没有变宽，Zato 甚至略窄，这和 Strive Sol Core 2 的说明对得上：“only 1 normal can be used before 5K will fail to juggle … Can be difficult to hit confirm without a Counter Hit”。确认难度集中到了轻攻击起手这一处。BBCF 的帧顿虽短，但收招里留了几帧取消时间，确认窗口（16~21 帧）与 Xrd 的 Zato 同档。AC+R 的数字只按 Dustloop 的文字规则算，可能偏低（Sol 的帧数页另有标注“delayed cancel”的例外）。
+所以 Xrd → Strive 的变化，与其说是“放宽”，不如说是“统一”。Xrd 已经允许不少招式在收招中取消，但每招长短不一，玩家要逐招记；Strive 改成“S、H 系整个收招都能取消”的通用规则，再加上持续帧变长（c.S 2 帧 → 6 帧），Sol c.S 从 24 帧变成 30 帧，Zato c.S 从 20 帧变成 29 帧。P、K 系没有变宽，Zato 甚至略窄，这和 Strive Sol Core 2 的说明对得上：“only 1 normal can be used before 5K will fail to juggle … Can be difficult to hit confirm without a Counter Hit”。确认难度集中到了轻攻击起手这一处。BBCF 的帧顿虽短，但收招里留了几帧取消时间，确认窗口（16~21 帧）与 Xrd 的 Zato 同档。AC+R 的数字只按 Dustloop 的文字规则算，偏低（Sol 的帧数页另有标注“delayed cancel”的例外）。
 
 **输入缓冲**
 
@@ -424,11 +422,11 @@ Xrd → Strive，按键缓冲从 3 帧增加到 5 帧，搓招的逐步时限几
 
 BB 各作的受创判定差异一直存在；CF 和 BBTag 统一的只是 Combo Rate（CF 全员 60%、BBTag 全员 80%），它只影响伤害，不影响连段能否成立。
 
-Rachel 页的比例看起来偏低（CF 6%），但她的角色限定大量写在长篇说明里，例如一条路线“does not work on: Arakune, Carl, Es, Hakumen, Jin, Nine, Noel, Tager, Taokaka, Lambda, Mu, Nu”，按条目计数会低估。各角色体型不同，到 BBCF 仍有大量角色限定，这一点没有随代数改变。
+Rachel 页的比例偏低（CF 6%），但她的角色限定大量写在长篇说明里，例如一条路线“does not work on: Arakune, Carl, Es, Hakumen, Jin, Nine, Noel, Tager, Taokaka, Lambda, Mu, Nu”，按条目计数会低估。各角色体型不同，到 BBCF 仍有大量角色限定，这一点没有随代数改变。
 
-**位置和时机的要求也没有减少**。两条线的板边连段占比各作都在 20%~40% 之间波动；GG 线标注距离、高度要求的注释反而上升（研究角色 8% → 19% → 33%），一部分来自 Strive 的 Clean Hit 新加的高度要求。标注“延迟”的条目也没有减少（GG 研究角色 27% → 44% → 41%）。所以能确定的只是：**GG 线把“角色差异”这一类门槛系统性地削减了**；至于执行难度是否被判断取代，数据看不出来。
+**位置和时机的要求也没有减少**。两条线的板边连段占比各作都在 20%~40% 之间波动；GG 线标注距离、高度要求的注释反而上升（研究角色 8% → 19% → 33%），一部分来自 Strive 的 Clean Hit 新加的高度要求。标注“延迟”的条目也没有减少（GG 研究角色 27% → 44% → 41%）。**GG 线把“角色差异”这一类门槛系统性地削减了**；执行难度是否被判断取代，要看另一组指标，现有计量只覆盖角色限定、位置和延迟。
 
-这组计量的局限要说清楚：Dustloop 各页由不同编者维护，CP Extend 页几乎只有记法（平均每条 177 字符），BBCT 的部分页面是旧粉丝 wiki 的原样搬运；旧作注释少可能让旧作的限定被低估，Strive 模板默认填“Everyone”又可能让 Strive 的限定被低估。条目比例反映的是页面构成，不是实战中遇到限定的频率。
+这组计量有几处偏差：Dustloop 各页由不同编者维护，CP Extend 页几乎只有记法（平均每条 177 字符），BBCT 的部分页面是旧粉丝 wiki 的原样搬运；旧作注释少，旧作的限定会被低估，Strive 模板默认填“Everyone”，Strive 的限定也会被低估。条目比例反映的是页面构成，不是实战中遇到限定的频率。
 
 ### 6.4 决策层：资源与判断
 
@@ -474,7 +472,7 @@ Rachel 页的比例看起来偏低（CF 6%），但她的角色限定大量写�
 
 两条线的走向不同。GG 一线是先把执行门槛换成判断，再收窄判断的范围：AC+R 用 2 帧窗口把便宜的取消锁起来，Xrd 用黄 RC 把它变成随时可用的 25% 选项，Strive 2.00 再明文限制 RC 的用途，并用 Counter Blitz 取代“需要练习和知识”的 Wild Assault。BB 一线反而一路往上加：Burst 从和 Barrier 绑在一起的一次性赌注，变成会回复、要和 Overdrive、Active Flow 抢同一条槽的资源。BBTag 才第一次拿掉执行型的取消。
 
-“难度从执行转向决策”**不能作为全文结论**。它在系统层有一处官方表态（Counter Blitz），在 Zato 的槽规则上有两次官方收紧作佐证；但 §6.1~§6.3 的数据显示，延迟、位置这类执行要求并没有减少，Strive Zato 的核心连段仍标 Hard，BBCF Rachel 的时机要求仍然很多。Zato 的资源账在 Strive 其实比 AC+R 简单（AC+R 有两套影子、Exhaustion 溢出槽和 FRC）；如果按“要记住的规则数”算，Strive 的决策负担并不更重，按“每个动作的代价”算才更重。
+“难度从执行转向决策”只在部分系统成立。它在系统层有一处官方表态（Counter Blitz），在 Zato 的槽规则上有两次官方收紧作佐证；但 §6.1~§6.3 的数据显示，延迟、位置这类执行要求并没有减少，Strive Zato 的核心连段仍标 Hard，BBCF Rachel 的时机要求仍然很多。Zato 的资源账在 Strive 比 AC+R 简单（AC+R 有两套影子、Exhaustion 溢出槽和 FRC）；如果按“要记住的规则数”算，Strive 的决策负担并不更重，按“每个动作的代价”算才更重。
 
 ### 6.5 汇总表：下限与上限
 
@@ -529,12 +527,9 @@ Strive 是最直接的例子：
 
 ### 7.4 结论的适用边界
 
-- 本文只覆盖 ASW 的两个系列、四个角色。
-- CS 世代缺帧数数据；BBCT 的帧数数据大面积缺失，Rachel 的 CT 连段只有二手资料；Xrd Zato 的连段页是空壳。
-- Strive 仍在变化，新手功能公开后，本文对“改系统”这条路的判断可能需要补充。
-- 窗口计算只到上界；Xrd、Strive 缺受身不能时间，窗口层面的跨代比较基本缺失。
-- 角色限定的计量依赖 Dustloop 注释，页面风格不同，且只能看到各页的现行版本。
-- 帧顿与缓冲的比较只覆盖有游戏文件的三作；取消窗口的终点按脚本中 `recoveryState` 的位置推断，依据是社区对 Xrd 引擎的逆向注释，BBCF 与 Strive 沿用同一解释；这一解释与 Strive S、H 系和 P、K 系的规则差别、Dustloop 的“late chain”标注都吻合，但 Strive P、K 系按此推断比 Dustloop 的说法多 2~5 帧，正文保留区间。Xrd 的缓冲数据也来自社区逆向注释。
+- 本文只覆盖 ASW 的两个系列、四个角色；Strive 仍在变化，新手功能公开后，这条判断要跟着更新。CS 世代缺帧数数据；BBCT 的帧数数据大面积缺失，Rachel 的 CT 连段只有二手资料；Xrd Zato 的连段页是空壳。
+- 窗口计算只到上界；Xrd、Strive 缺受身不能时间，窗口层面的跨代比较基本缺失。角色限定的计量依赖 Dustloop 注释，页面风格不同，且只能看到各页的现行版本。
+- 帧顿与缓冲的比较只覆盖有游戏文件的三作；取消窗口的终点按脚本中 `recoveryState` 的位置推断，依据是社区对 Xrd 引擎的逆向注释，BBCF 与 Strive 沿用同一解释；这一解释与 Strive S、H 系和 P、K 系的规则差别、Dustloop 的“late chain”标注都吻合，但 Strive P、K 系按此推断比 Dustloop 的说法多 2~5 帧。Xrd 的缓冲数据也来自社区逆向注释。
 
 ---
 
