@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import HomePage from './HomePage.vue'
 import ReadingTools from './ReadingTools.vue'
 import DownloadSource from './DownloadSource.vue'
+import FtgRouteExplorer from './FtgRouteExplorer.vue'
 import { h } from 'vue'
 import './style.css'
 
@@ -11,5 +12,6 @@ export default {
   enhanceApp({ app }) {
     app.component('HomePage', HomePage)
     app.component('DownloadSource', DownloadSource)
+    app.component('FtgRouteExplorer', FtgRouteExplorer)
   }
 }

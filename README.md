@@ -23,7 +23,7 @@ Windows PowerShell 如限制 npm 脚本，可把命令中的 `npm` 换成 `npm.c
 - BF6 配图：保存在根目录 `BF6_Gunplay_拆解案_assets/`，与文章中的相对路径对应。构建时自动复制到全文与下载目录。
 - 个人介绍和联系方式：编辑 `docs/about.md`。
 - 拆解方法页：编辑 `docs/methods.md`。每篇全文页的开头和结尾会自动加上指向它的链接（见 `scripts/prepare-content.mjs`）。
-- 首页：编辑 `docs/.vitepress/theme/HomePage.vue`。
+- 首页：编辑 `docs/.vitepress/theme/HomePage.vue`。`featured` 是三篇代表作（附能力、结论、验证边界与章节入口）；`experiments` 放个人原型与设计实验，`groups` 放其余战斗拆解，`essays` 放系列与品类研究。每篇只进入其中一组，精选不按发布时间自动替换。FTG 原型的展示入口是 `docs/ftg-demo/index.md`，项目源码在独立的 [personal-ftg-demo 仓库](https://github.com/QzKING2023/personal-ftg-demo)。
 - 网站名称、导航和部署子路径：编辑 `docs/.vitepress/config.mts`。
 - 页面风格：编辑 `docs/.vitepress/theme/style.css`。
 
@@ -36,7 +36,7 @@ BF6 的下载文件与根目录 Markdown 完全一致。离线查看配图时，
 1. 把全文放在根目录，作为唯一内容来源。
 2. 在 `scripts/articles.mjs` 中登记 `slug`、源文件、下载文件名、标题、简介，以及章节数（`sections`；章节从 1 开始编号时另设 `firstSection: 1`）和附录列表（`appendices`）。
 3. 在 `docs/<slug>/` 下新建导读 `index.md`。
-4. 在 `docs/.vitepress/config.mts` 导航栏的“文章”下拉菜单和首页 `HomePage.vue` 中添加入口，并在 `docs/about.md` 的文章列表中补上一行。
+4. 在 `docs/.vitepress/config.mts` 导航栏的“文章”对应分组和首页 `HomePage.vue` 的对应数组中添加入口，并在 `docs/about.md` 的对应区域补上介绍。首页顺序是精选案例、设计实验、更多战斗拆解、系列与品类研究；个人原型进入设计实验，其余新增文章默认放后两组。设计实验说明问题、实现、验证结果与当前待验证项，正文与下载仍走同一套文章生成流程。
 
 构建时会自动为以下标题加锚点：`## 1. …`（`#section-1`）、`### 1.2 …`（`#section-1-2`）、`### 1.2.3 …`（`#section-1-2-3`）、`### 1. …`（`#section-1`）、`## 第一部 …`（`#part-1`）、`## 结语`（`#conclusion`）、`## 附录 A：…` 或 `## 附录 A …`（`#appendix-A`）。
 

@@ -1,6 +1,15 @@
 // Root Markdown files and their assets are the only sources for full articles.
 export const articles = [
   {
+    slug: 'ftg-demo',
+    source: 'FTG_Demo_角色设计实验.md',
+    download: 'ftg-demo.md',
+    title: 'FTG 角色原型：D 系位移与连段选路 · 全文',
+    description: '用 D 系组织位移攻击，在双换边搬运、抵墙短线与版边保位之间选路；从八样本机器回放与一次调参，看角色方案怎样落地。',
+    sections: 7,
+    appendices: ['A', 'B']
+  },
+  {
     slug: 'sts',
     source: 'STS_两代设计方向.md',
     download: 'sts-overview.md',

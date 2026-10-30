@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'QzKING · 游戏拆解',
-  description: 'QzKING2023 的游戏拆解与观察。从游玩体验出发，理解游戏里的规则、选择与反馈，以及这些规则怎样演变。',
+  description: '以战斗策划为方向，研究角色招式、敌人行为与资源系统。通过拆解案例与个人原型，展示规则分析、设计取舍与验证。',
   base: '/QzKING-s-game-breakdown/',
   cleanUrls: false,
   srcExclude: ['public/**'],
@@ -14,21 +14,30 @@ export default defineConfig({
       { text: '首页', link: '/', activeMatch: '^/$' },
       {
         text: '文章',
-        activeMatch: '^/(sts|sts-silent|sts-boss|doom|bbcf-ragna|bbcf-rachel|shooting|turn-based|asw|bf6|valheim|valheim-boss|valheim-defence)/',
+        activeMatch: '^/(sts|sts-silent|sts-boss|doom|bbcf-ragna|bbcf-rachel|shooting|turn-based|asw|bf6|valheim|valheim-boss|valheim-defence|ftg-demo)/',
         items: [
-          { text: '《杀戮尖塔》总纲', link: '/sts/', activeMatch: '^/sts/' },
-          { text: '《杀戮尖塔》静默猎手', link: '/sts-silent/', activeMatch: '^/sts-silent/' },
-          { text: '《杀戮尖塔》反无限 BOSS', link: '/sts-boss/', activeMatch: '^/sts-boss/' },
-          { text: 'DOOM 怪物状态机', link: '/doom/', activeMatch: '^/doom/' },
-          { text: 'Valheim 防御改造', link: '/valheim-defence/', activeMatch: '^/valheim-defence/' },
-          { text: 'Valheim BOSS 拆解', link: '/valheim-boss/', activeMatch: '^/valheim-boss/' },
-          { text: 'BBCF 拉格纳拆解案', link: '/bbcf-ragna/', activeMatch: '^/bbcf-ragna/' },
-          { text: 'BBCF 雷琪儿拆解案', link: '/bbcf-rachel/', activeMatch: '^/bbcf-rachel/' },
-          { text: '射击的进化史', link: '/shooting/', activeMatch: '^/shooting/' },
-          { text: '回合制的进化史', link: '/turn-based/', activeMatch: '^/turn-based/' },
-          { text: 'ASW 角色变迁', link: '/asw/', activeMatch: '^/asw/' },
-          { text: 'BF6 枪械拆解', link: '/bf6/', activeMatch: '^/bf6/' },
-          { text: 'Valheim 拆解', link: '/valheim/', activeMatch: '^/valheim/' }
+          { text: '精选案例', items: [
+            { text: 'BBCF 拉格纳', link: '/bbcf-ragna/' },
+            { text: 'Valheim BOSS 拆解与改造', link: '/valheim-boss/' },
+            { text: '静默猎手两代拆解', link: '/sts-silent/' }
+          ] },
+          { text: '设计实验', items: [
+            { text: 'FTG 角色原型：D 系位移与连段选路', link: '/ftg-demo/' }
+          ] },
+          { text: '更多战斗拆解', items: [
+            { text: 'BBCF 雷琪儿', link: '/bbcf-rachel/' },
+            { text: 'DOOM 怪物状态机', link: '/doom/' },
+            { text: '尖塔反无限 BOSS', link: '/sts-boss/' },
+            { text: 'Valheim 防御管线改造', link: '/valheim-defence/' },
+            { text: 'BF6 Gunplay', link: '/bf6/' },
+            { text: 'Valheim 战斗系统', link: '/valheim/' }
+          ] },
+          { text: '系列与品类', items: [
+            { text: '《杀戮尖塔》两代设计方向', link: '/sts/' },
+            { text: 'ASW 角色变迁', link: '/asw/' },
+            { text: '射击的进化史', link: '/shooting/' },
+            { text: '回合制的进化史', link: '/turn-based/' }
+          ] }
         ]
       },
       { text: '拆解方法', link: '/methods', activeMatch: '^/methods' },
