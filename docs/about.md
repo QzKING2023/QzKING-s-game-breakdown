@@ -17,7 +17,18 @@ description: 关于 QzKING2023 的游戏拆解与观察，以及联系方式。
 | 敌人设计与改造 | [Valheim BOSS](./valheim-boss/)：[行为结构](./valheim-boss/full.md#section-4)、[雾中三幕](./valheim-boss/full.md#section-7-1) | 从原版招式与阶段提出改造，用模型比较收益和代价；尚未实机验证 |
 | 资源循环与构筑生态 | [静默猎手两代拆解](./sts-silent/)：[取得与资源成本](./sts-silent/full.md#section-3)、[方向与成败](./sts-silent/full.md#section-6) | 对照两代机制、官方补丁与受控计算；区分机制依据和仍缺少的玩家行为数据 |
 
-工具如何服务于这些问题，见[拆解方法](./methods.md)。各篇正文说明版本、来源、计算条件和未决问题。
+工具如何服务于这些问题，见[拆解方法](./methods.md)；跨品类的六条战斗设计沉淀见[从这批拆解里沉淀出的战斗设计原则](./methods.md#design-principles)。各篇正文说明版本、来源、计算条件和未决问题。
+
+## 按战斗设计母题阅读
+
+除按单款作品浏览外，全站文章反复围绕四条跨品类的战斗设计母题展开：
+
+| 设计母题 | 对应文章与切入章节 | 核心对比 |
+| --- | --- | --- |
+| 极简 AI 与数据表杠杆 | [DOOM 怪物状态机](./doom/full.md#section-3) · [Valheim BOSS](./valheim-boss/full.md#section-4-1) | 共用一套极简底层状态机/AI，只靠少量数据字段如何拉出敌人与 BOSS 分层 |
+| 压制极端套路的连带成本 | [杀戮尖塔两代方向](./sts/full.md#section-2) · [Valheim BOSS](./valheim-boss/full.md#section-6) · [BF6 Gunplay](./bf6/full.md#section-13) | 限制无限循环、禁止 BOSS 踉跄或提高枪械随机性，分别如何外溢到普通玩家的常规决策 |
+| 门槛简化与深度留存 | [ASW 角色变迁](./asw/full.md#section-7) · [BBCF 拉格纳](./bbcf-ragna/full.md#section-2) · [FTG 角色原型](./ftg-demo/full.md#section-5) | 压缩输入指令后，执行与决策门槛转移到了确认、距离还是节拍窗口 |
+| 结算管线与失衡断崖 | [Valheim 战斗系统](./valheim/full.md#section-2) · [近战防御管线改造](./valheim-defence/full.md#section-3) · [BF6 有效射程](./bf6/full.md#section-5) | 非线性公式与随机叠加怎样制造体验断崖，以及单点调参的真实上限 |
 
 ## 设计实验
 

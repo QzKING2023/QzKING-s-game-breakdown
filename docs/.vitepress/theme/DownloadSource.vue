@@ -7,5 +7,5 @@ defineProps({
 </script>
 
 <template>
-  <a :href="withBase(href)" :download="filename">下载 Markdown 文件</a>
+  <a class="download-source" :href="withBase(href)" :download="filename">下载 Markdown 文件 <span aria-hidden="true">↓</span></a>
 </template>

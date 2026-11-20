@@ -6,8 +6,11 @@ export default defineConfig({
   description: '以战斗策划为方向，研究角色招式、敌人行为与资源系统。通过拆解案例与个人原型，展示规则分析、设计取舍与验证。',
   base: '/QzKING-s-game-breakdown/',
   cleanUrls: false,
+  appearance: 'dark',
   srcExclude: ['public/**'],
-  head: [['meta', { name: 'theme-color', content: '#f6f5f0' }]],
+  head: [
+    ['meta', { name: 'theme-color', content: '#191715' }]
+  ],
   themeConfig: {
     siteTitle: 'QzKING / 游戏拆解',
     nav: [

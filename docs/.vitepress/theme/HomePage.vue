@@ -61,52 +61,58 @@ const evidenceLink = (slug, section) => withBase('/' + slug + '/full.html#sectio
 <template>
   <main class="portfolio">
     <section class="portfolio-intro" aria-labelledby="intro-title">
-      <p class="eyebrow">QzKING2023 / 战斗设计研究</p>
-      <h1 id="intro-title">从一次交手，<br>理解设计的取舍。</h1>
-      <div class="intro-bottom">
-        <p>以战斗策划为方向，研究角色、对手与资源。<br>从游戏体验出发，用规则、数据与验证说明设计判断。</p>
-        <div class="intro-links">
-          <a class="primary-link" href="#selected">先看三篇代表作 <span aria-hidden="true">↓</span></a>
-          <a class="text-link" :href="withBase('/about.html#contact')">联系我 <span aria-hidden="true">↗</span></a>
+      <div class="intro-frame">
+        <p class="eyebrow intro-kicker">QzKING2023 · 战斗设计研究</p>
+        <h1 id="intro-title">从一次交手，<br>理解设计的取舍。</h1>
+        <div class="intro-bottom">
+          <p>以战斗策划为方向，研究角色、对手与资源。<br>从游戏体验出发，用规则、数据与验证说明设计判断。</p>
+          <div class="intro-links">
+            <a class="primary-link" href="#selected">先看三篇代表作 <span class="arrow-down" aria-hidden="true">↓</span></a>
+            <a class="text-link" :href="withBase('/about.html#contact')">联系我 <span class="arrow-diag" aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </section>
     <section id="selected" class="selected-work" aria-labelledby="selected-title">
-      <div class="section-heading"><div><p class="eyebrow">精选案例 / SELECTED WORK</p><h2 id="selected-title">三个切口，看战斗怎样运转</h2></div><span>01 — 03</span></div>
+      <div class="section-heading"><div><p class="eyebrow">精选案例 · Selected Work</p><h2 id="selected-title">三个切口，看战斗怎样运转</h2></div><span class="section-counter">01 — 03</span></div>
       <nav class="case-shortcuts" aria-label="按设计能力阅读代表作">
-        <a v-for="item in featured" :key="item.id" :href="'#case-' + item.id"><span>{{ item.number }}</span><strong>{{ item.area }}</strong><span aria-hidden="true">↓</span></a>
+        <a v-for="item in featured" :key="item.id" :href="'#case-' + item.id" :class="'case-' + item.id">
+          <span class="shortcut-num">{{ item.number }}</span>
+          <strong>{{ item.area }}</strong>
+          <span class="arrow-down" aria-hidden="true">↓</span>
+        </a>
       </nav>
       <article v-for="item in featured" :id="'case-' + item.id" :key="item.id" class="selected-case" :class="'case-' + item.id" :aria-labelledby="item.id + '-title'">
-        <div class="case-summary">
-          <p class="case-category">{{ item.number }} / {{ item.area }}</p>
+        <div class="case-summary" :data-index="item.number">
+          <p class="case-category"><span class="case-num">{{ item.number }}</span><span aria-hidden="true">·</span>{{ item.area }}</p>
           <h3 :id="item.id + '-title'">{{ item.title }}</h3>
           <p class="case-question">{{ item.question }}</p>
-          <a class="text-link" :href="guide(item.slug)">阅读案例导读 <span aria-hidden="true">→</span></a>
+          <a class="text-link" :href="guide(item.slug)">阅读案例导读 <span class="arrow-right" aria-hidden="true">→</span></a>
         </div>
         <div class="case-detail">
           <dl><div><dt>分析与设计工作</dt><dd>{{ item.work }}</dd></div><div><dt>关键判断</dt><dd>{{ item.finding }}</dd></div></dl>
-          <div class="evidence-links"><a v-for="entry in item.evidence" :key="entry.section" :href="evidenceLink(item.slug, entry.section)">{{ entry.label }} <span aria-hidden="true">↗</span></a></div>
+          <div class="evidence-links"><a v-for="entry in item.evidence" :key="entry.section" :href="evidenceLink(item.slug, entry.section)"><span class="evidence-sec" aria-hidden="true">§{{ entry.section.replace('-', '.') }}</span>{{ entry.label }} <span class="arrow-diag" aria-hidden="true">↗</span></a></div>
           <p class="case-boundary"><span>验证边界</span>{{ item.boundary }}</p>
         </div>
       </article>
     </section>
     <section id="experiments" class="design-experiments" aria-labelledby="experiments-title">
-      <div class="section-heading"><div><p class="eyebrow">设计实验 / PROTOTYPES</p><h2 id="experiments-title">把设计问题做成原型</h2></div><span>01 项</span></div>
+      <div class="section-heading"><div><p class="eyebrow">设计实验 · Prototypes</p><h2 id="experiments-title">把设计问题做成原型</h2></div><span class="section-counter">01 项</span></div>
       <article v-for="item in experiments" :key="item.slug" class="experiment-card" :aria-labelledby="item.slug + '-title'">
-        <div class="experiment-summary"><p class="case-category">个人项目 / Godot</p><h3 :id="item.slug + '-title'">{{ item.title }}</h3><p>{{ item.question }}</p></div>
-        <div class="experiment-detail"><p>{{ item.description }}</p><p class="experiment-status">{{ item.status }}</p><div class="experiment-links"><a class="text-link" :href="guide(item.slug)">查看设计与验证 <span aria-hidden="true">→</span></a><a class="text-link" :href="item.repository" target="_blank" rel="noopener noreferrer">项目仓库 <span aria-hidden="true">↗</span></a></div></div>
+        <div class="experiment-summary"><p class="case-category">个人项目 · Godot</p><h3 :id="item.slug + '-title'">{{ item.title }}</h3><p>{{ item.question }}</p></div>
+        <div class="experiment-detail"><p>{{ item.description }}</p><p class="experiment-status">{{ item.status }}</p><div class="experiment-links"><a class="text-link" :href="guide(item.slug)">查看设计与验证 <span class="arrow-right" aria-hidden="true">→</span></a><a class="text-link" :href="item.repository" target="_blank" rel="noopener noreferrer">项目仓库 <span class="arrow-diag" aria-hidden="true">↗</span></a></div></div>
       </article>
     </section>
     <section id="more" class="article-library" aria-labelledby="more-title">
-      <div class="section-heading"><div><p class="eyebrow">继续阅读 / MORE CASES</p><h2 id="more-title">更多战斗拆解</h2></div><span>06 篇</span></div>
+      <div class="section-heading"><div><p class="eyebrow">继续阅读 · More Cases</p><h2 id="more-title">更多战斗拆解</h2></div><span class="section-counter">06 篇</span></div>
       <div class="library-groups"><div v-for="group in groups" :key="group.title" class="library-group"><h3>{{ group.title }}</h3>
-        <a v-for="item in group.items" :key="item.slug" class="library-item" :href="guide(item.slug)"><div><h4>{{ item.title }}</h4><p>{{ item.description }}</p></div><span aria-hidden="true">↗</span></a>
+        <a v-for="item in group.items" :key="item.slug" class="library-item" :href="guide(item.slug)"><div><h4>{{ item.title }}</h4><p>{{ item.description }}</p></div><span class="arrow-diag" aria-hidden="true">↗</span></a>
       </div></div>
     </section>
     <section id="series" class="article-library" aria-labelledby="series-title">
-      <div class="section-heading"><div><p class="eyebrow">系列与品类 / CONTEXT</p><h2 id="series-title">把个案放回更长的变化中</h2></div><span>04 篇</span></div>
-      <div class="essay-grid"><a v-for="item in essays" :key="item.slug" class="library-item" :href="guide(item.slug)"><div><h3>{{ item.title }}</h3><p>{{ item.description }}</p></div><span aria-hidden="true">↗</span></a></div>
+      <div class="section-heading"><div><p class="eyebrow">系列与品类 · Context</p><h2 id="series-title">把个案放回更长的变化中</h2></div><span class="section-counter">04 篇</span></div>
+      <div class="essay-grid"><a v-for="item in essays" :key="item.slug" class="library-item" :href="guide(item.slug)"><div><h3>{{ item.title }}</h3><p>{{ item.description }}</p></div><span class="arrow-diag" aria-hidden="true">↗</span></a></div>
     </section>
-    <section class="home-contact" aria-labelledby="contact-title"><div><p class="eyebrow">方法与交流</p><h2 id="contact-title">每个判断，都有依据与边界。</h2><p>文件事实、规则计算、模型结果与作者判断，在文章中分别说明。</p></div><div class="contact-links"><a class="text-link" :href="withBase('/methods.html')">了解拆解方法 ↗</a><a class="text-link" :href="withBase('/about.html')">关于我与联系方式 ↗</a></div></section>
+    <section class="home-contact" aria-labelledby="contact-title"><div><p class="eyebrow">方法与交流</p><h2 id="contact-title">每个判断，都有依据与边界。</h2><p>文件事实、规则计算、模型结果与作者判断，在文章中分别说明。</p></div><div class="contact-links"><a class="text-link" :href="withBase('/methods.html')">了解拆解方法 <span class="arrow-diag" aria-hidden="true">↗</span></a><a class="text-link" :href="withBase('/about.html')">关于我与联系方式 <span class="arrow-diag" aria-hidden="true">↗</span></a></div></section>
   </main>
 </template>

@@ -191,6 +191,17 @@ outline: [2, 3]
 4. **把行为假设和文件数据分开。** 模型里凡是不来自文件的部分都单独列出，并改变它们看结论是否还成立。
 5. **事实按证据等级标注，判断写依据和结论。** 模拟结果标“模型”；不要用“推断”给评价句降级。
 
+## 从这批拆解里沉淀出的战斗设计原则 {#design-principles}
+
+把跨品类的拆解结论脱敏收拢，新项目做战斗设计时有六条反复应验的原则：
+
+1. **别用单侧直觉调双向机制。** 击退位移、防御硬直与压制缝隙往往同时约束攻防双方：砍低推力在拉大玩家窗口的同时也抬高了 BOSS 的出手密度，缩短守方防硬会直接拆松攻方原本的连防与短缝。调参前必须双向复算（[Valheim BOSS §7.1](./valheim-boss/full.md#section-7-1) · [BBCF 拉格纳 §3.4](./bbcf-ragna/full.md#section-3-4)）。
+2. **压制极端套路时，先算普通玩法承担的连带成本。** 抬高共享运转工具的稀有度、全局关闭 BOSS 招架踉跄、或把不可背随机叠进常用交战距离，都会外溢到目标套路之外；限制优先落在公开可算的局部预算，而非一刀切禁手或收紧全角色供给（[静默猎手 §3.1](./sts-silent/full.md#section-3-1) · [反无限 BOSS §6.1–6.2](./sts-boss/full.md#section-6-1) · [Valheim BOSS §3.3](./valheim-boss/full.md#section-3-3) · [BF6 Gunplay §5](./bf6/full.md#section-5)）。
+3. **极简底层配高杠杆断点，比堆复杂 AI 更稳，但要靠关卡几何与换牌兜底。** 共用一套极简状态机或野外 AI，只靠受击打断概率、血量门退出判据与优先牌就能清晰分层；一旦敌人缺少掩体与协同，压迫感必须由走廊宽度、密度与阶段换招来承接（[DOOM §3.4](./doom/full.md#section-3-4)、[§4.4](./doom/full.md#section-4-4) · [Valheim BOSS §4.1](./valheim-boss/full.md#section-4-1)、[§7.1](./valheim-boss/full.md#section-7-1)）。
+4. **拆高难断崖先标靶向性，并承认单系统的改造上限。** 非线性公式叠加倍率容易制造断崖；动刀前先做单变量消融区分“高靶向结构参数”与“扎眼但贡献小的 Bug”，当防御公式触顶后，跨模块死局必须移交输出或遭遇侧解决（[Valheim 战斗 §4.3](./valheim/full.md#section-4-3) · [近战防御改造 §3.1–3.4](./valheim-defence/full.md#section-3-1)、[§5.1](./valheim-defence/full.md#section-5-1)）。
+5. **简化操作不等于消除门槛，要把深度显式安放进距离、资源或节拍。** 收拢复合输入后，执行压力只是从搓招转移到了确认窗口、墙距选路或有限资源分配；单看收招负帧或技能标签都看不全真实取舍（[FTG 原型 §3](./ftg-demo/full.md#section-3)、[§5](./ftg-demo/full.md#section-5) · [BBCF 拉格纳 §2.1–2.2](./bbcf-ragna/full.md#section-2-1) · [BBCF 雷琪儿 §3.1](./bbcf-rachel/full.md#section-3-1) · [ASW 变迁 §7](./asw/full.md#section-7)）。
+6. **多处轻摩擦叠加会改写整个构筑与流派生态，跨系统账必须一起算。** 删牌涨价、组件降供、能量副作用与终局干扰单看都不致命，但串成“取得 → 启动 → 兑现 → 抗干扰”全链路后会倒逼构筑转向持续收益；动作游戏里的流派风险差同理要放到完整遭遇周期而非单击表里核算（[静默猎手 §3.4](./sts-silent/full.md#section-3-4)、[§4.2–4.4](./sts-silent/full.md#section-4-2)、[§6.2](./sts-silent/full.md#section-6-2) · [Valheim 战斗 §5.8](./valheim/full.md#section-5-8)、[§10](./valheim/full.md#section-10)）。
+
 ---
 
 返回 [首页](./index.md) · [关于我](./about.md)
